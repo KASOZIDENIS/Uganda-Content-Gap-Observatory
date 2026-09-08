@@ -1,0 +1,276 @@
+admin_qid,admin_label,items
+Q3894,Kampala,172
+Q2559188,Western Region,103
+Q2559220,Eastern Region,83
+Q976848,Wakiso District,76
+Q2559686,Northern Region,75
+Q429685,Central Region,59
+Q1151066,Mukono District,33
+Q1229919,Kasese District,28
+Q1028215,Gulu District,26
+Q1091595,Mbarara District,20
+Q211970,Entebbe,19
+Q1186535,Hoima District,19
+Q1229797,Bushenyi District,18
+Q1036,Uganda,18
+Q867219,Kalangala District,17
+Q1229910,Kabarole District,17
+Q500107,Fort Portal,15
+Q1364817,Luwero District,15
+Q6960368,Nakawa Division,14
+Q6739552,Makindye Division,14
+Q289419,Rukungiri District,14
+Q604966,Kibaale District,13
+Q1229758,Arua District,13
+Q983748,Jinja District,12
+Q976873,Rakai District,12
+Q731039,Mbarara City,12
+Q6695059,Rubaga Division,12
+Q580538,Kisoro District,12
+Q3526470,Kabale District,12
+Q1229734,Adjumani District,12
+Q1186541,Tororo District,12
+Q891962,Mubende District,11
+Q432438,Nakaseke District,11
+Q3539648,Rubirizi District,11
+Q3539116,Kiryandongo District,11
+Q3321631,Buikwe District,11
+Q3321608,Buvuma District,11
+Q206519,Lira District,11
+Q1318806,Kamwenge District,11
+Q1032233,Masaka District,11
+Q6379969,Kawempe Division,10
+Q2183668,Moyo District,9
+Q204642,Ntungamo District,9
+Q1362109,Mpigi District,9
+Q1032245,Kanungu District,9
+Q1032238,Masindi District,9
+Q956659,Masaka,8
+Q581379,Gulu City,8
+Q500111,Arua,8
+Q3539572,Nwoya District,8
+Q3321614,Kalungu District,8
+Q1229800,Busia District,8
+Q966819,Kira Town,7
+Q501709,Jinja,7
+Q473748,Buganda,7
+Q3539711,Sheema District,7
+Q1375850,Moroto District,7
+Q1375789,Manafwa District,7
+Q1375771,Amuru District,7
+Q1364824,Mayuge District,7
+Q1362129,Bundibugyo District,7
+Q1318815,Kyenjojo District,7
+Q1229869,Iganga District,7
+Q1015727,Mbale City,7
+Q926417,Kampala District,6
+Q588930,Kabale,6
+Q3321637,Gomba District,6
+Q2614835,Karamoja,6
+Q164474,Kamuli District,6
+Q1375835,Sironko District,6
+Q1362587,Yumbe District,6
+Q1151062,Kumi District,6
+Q1114915,Namayingo District,6
+Q1091337,Soroti District,6
+Q976883,Ssembabule District,5
+Q892064,Kiboga District,5
+Q581822,Mbale District,5
+Q500162,Kitgum District,5
+Q3539730,Zombo District,5
+Q3536053,Agago District,5
+Q2141024,Soroti,5
+Q1375825,Nebbi District,5
+Q1318865,Kiruhura District,5
+Q1230035,Pader District,5
+Q1230005,Mityana District,5
+Q1229921,Kapchorwa District,5
+Q1229793,Buliisa District,5
+Q1229750,Apac District,5
+Q1207825,Tororo,5
+Q1207391,Kayunga District,5
+Q1009,Cameroon,5
+Q976859,Nakasongola District,4
+Q588927,Maracha District,4
+Q538636,Ankole,4
+Q4261446,West Nile sub-region,4
+Q38249546,Kyotera District,4
+Q38249484,Kagadi District,4
+Q3539495,Napak District,4
+Q3539277,Lamwo District,4
+Q2174978,Nebbi,4
+Q179198,Mukono,4
+Q1375843,Pallisa District,4
+Q1375755,Butaleja District,4
+Q1318887,Isingiro District,4
+Q1318857,Koboko District,4
+Q1318833,Oyam District,4
+Q1229930,Katakwi District,4
+Q1229906,Kaberamaido District,4
+Q1229881,Kaabong District,4
+Q114,Kenya,4
+Q1114954,Lwengo District,4
+Q1114885,Kibuku District,4
+Q1015699,Lira,4
+Q534203,Kyankwanzi District,3
+Q3539414,Mitooma District,3
+Q3539256,Kyegegwa District,3
+Q3539151,Kole District,3
+Q3321622,Butambala District,3
+Q15260271,Munyonyo,3
+Q1375878,Lyantonde District,3
+Q1375868,Bukwo District,3
+Q1375853,Nakapiripirit District,3
+Q1375812,Bukedea District,3
+Q1375762,Amuria District,3
+Q1365449,Bududa District,3
+Q1362085,Budaka District,3
+Q1318877,Ibanda District,3
+Q1318872,Dokolo District,3
+Q1318843,Kotido District,3
+Q1232016,Kasese,3
+Q1229798,Bugiri District,3
+Q1114938,Buyende District,3
+Q1114927,Serere District,3
+Q1114903,Ngora District,3
+Q1114868,Bulambuli District,3
+Q992016,Moyo Town,2
+Q889912,Tooro Kingdom,2
+Q889897,Bunyoro,2
+Q691037,Busoga,2
+Q6699738,Lugazi,2
+Q6404080,Kibuli,2
+Q5002005,Busoga sub-region,2
+Q4986374,Buikwe,2
+Q488519,Eastern Equatoria,2
+Q44377523,Butebo District,2
+Q38249615,Rukiga District,2
+Q38249602,Rubanda District,2
+Q38249597,Omoro District,2
+Q38249480,Kakumiro District,2
+Q3539602,Otuke District,2
+Q3539547,Ntoroko District,2
+Q3537661,Buhweju District,2
+Q3536116,Amudat District,2
+Q3536082,Alebtong District,2
+Q3530559,Nakasongola,2
+Q3529595,Nakaseke,2
+Q3459039,Ibanda,2
+Q3321998,Kween District,2
+Q31974753,Nyapea,2
+Q318666,Central Province,2
+Q3088116,Kamuli,2
+Q261506,Makerere University,2
+Q2360921,Musanze District,2
+Q2267729,Mityana,2
+Q22670087,Lwemiyaga County,2
+Q2193389,Moroto Town,2
+Q1907120,Masindi,2
+Q18386821,Kampala Central Division,2
+Q1657091,Iganga,2
+Q1375859,Kaliro District,2
+Q1375819,Namutumba District,2
+Q1375780,Abim District,2
+Q1318822,Amolatar District,2
+Q1114977,Luuka District,2
+Q10372207,Antarctic Treaty area,2
+Q974,Democratic Republic of the Congo,1
+Q938145,Ntungamo,1
+Q87982,African Great Lakes,1
+Q8673,Lagos,1
+Q85798241,Rwampara district,1
+Q85774640,Kitagwenda District,1
+Q853152,Eastern Province,1
+Q7380808,Rushere,1
+Q7067614,Ntenjeru County,1
+Q7067544,Nsambya,1
+Q6962120,Namulonge,1
+Q6962116,Namugongo Martyrs Shrine,1
+Q6960364,Nakawa,1
+Q6944731,Mweya,1
+Q6817018,Mengo,1
+Q6799827,Mbuya,1
+Q6700211,Rukungiri,1
+Q65121447,Lodonga,1
+Q649,Moscow,1
+Q6427484,Kololo,1
+Q6417691,Kitagata,1
+Q6414632,Kipkelion Constituency,1
+Q6405975,Kigumba,1
+Q6404024,Kibingo,1
+Q6379968,Kawempe,1
+Q6375047,Katalemwa,1
+Q6359099,Kampala Capital City Authority,1
+Q6354619,Kalungu,1
+Q6349017,Kajjansi,1
+Q6273034,Kumi Town,1
+Q6272909,Kaabong,1
+Q60769700,Kikuube District,1
+Q60,New York City,1
+Q5555124,Ggaba,1
+Q5528731,Gayaza,1
+Q530084,Queen Elizabeth National Park,1
+Q525954,Kisoro,1
+Q5002521,Butiaba,1
+Q4986229,Bugoloobi,1
+Q49465191,Rupa,1
+Q49464598,Paidha,1
+Q49462248,Dufile subcounty,1
+Q4940747,Bombo,1
+Q49298235,Ndorwa County,1
+Q49298222,Mbarara Municipality,1
+Q49298197,Kyamuswa County,1
+Q49298180,Kinkiizi County,1
+Q49298166,Kassanda County,1
+Q49298163,Kashari County,1
+Q49298038,Busiro County,1
+Q49298009,Buhaguzi County,1
+Q49297989,Aswa County,1
+Q4875393,Bbaale County,1
+Q4766092,Ankole sub-region,1
+Q4690976,Agago,1
+Q4667801,Abim,1
+Q4305496,Mpondwe,1
+Q3876,Lilongwe,1
+Q3870,Nairobi,1
+Q38249629,Bunyangabu District,1
+Q38249567,Pakwach District,1
+Q3565504,Kigezi District,1
+Q3528929,Mubende,1
+Q3335467,Namilyango,1
+Q3321599,Bukomansimbi District,1
+Q32530441,Rwamucucu,1
+Q31979558,Obalanga,1
+Q3193685,Kasenyi,1
+Q31887036,Bweema,1
+Q31880352,Biguli,1
+Q28231516,Bukasa Inland Port,1
+Q2795682,Rwenzururu Kingdom,1
+Q25907262,Gulu,1
+Q258780,Bungoma District,1
+Q25227163,Masafu,1
+Q2505963,Kotido,1
+Q2488907,Yumbe,1
+Q2463008,Bushenyi,1
+Q24054203,Kisubi,1
+Q2318123,Luweero,1
+Q2297538,Pallisa,1
+Q2203142,Kapchorwa,1
+Q1960,Dar es Salaam,1
+Q16954390,Bugoye,1
+Q16896022,Nyenga,1
+Q16895628,Nakasero,1
+Q16892998,Kabamba,1
+Q1649358,Wakiso Town,1
+Q1624192,Hoima,1
+Q15478219,Bujumbura Province,1
+Q15262424,Nkozi,1
+Q15261089,Nateete,1
+Q15260878,Namasagali,1
+Q139366400,Rubaare,1
+Q130625,North Kivu,1
+Q1278653,Trans-Nzoia county,1
+Q125888,Lake Albert,1
+Q111911224,Kabarole,1
+Q106540,Rwenzori Mountains,1
+Q1024647,Ikeja,1

@@ -1,0 +1,81 @@
+type_qid,type_label,items,en,lg,sw,pct_in_lg,pct_in_sw
+Q5,human,3414,3180,2632,638,77.1,18.7
+Q47521,stream,1828,4,1,1800,0.1,98.5
+Q7630601,sub-county of Uganda,1115,40,23,19,2.1,1.7
+Q54050,hill,901,4,1,0,0.1,0.0
+Q4022,river,648,28,7,593,1.1,91.5
+Q486972,human settlement,396,370,213,197,53.8,49.7
+Q8502,mountain,288,14,1,6,0.3,2.1
+Q13406463,Wikimedia list article,261,120,20,66,7.7,25.3
+Q23442,island,224,9,2,212,0.9,94.6
+Q15221623,bilateral relation,172,19,0,0,0.0,0.0
+Q110977342,town council of Uganda,170,0,0,0,0.0,0.0
+Q4421,forest,157,17,2,1,1.3,0.6
+Q5177124,county of Uganda,152,8,2,1,1.3,0.7
+Q3539870,district of Uganda,136,135,114,133,83.8,97.8
+Q16917,hospital,132,130,34,1,25.8,0.8
+Q4830453,business,120,118,29,5,24.2,4.2
+Q27020041,sports season,118,115,1,0,0.8,0.0
+Q24529780,point,102,0,0,0,0.0,0.0
+Q34442,road,96,96,9,0,9.4,0.0
+Q3918,university,59,54,28,3,47.5,5.1
+Q110977362,division of Uganda,58,4,0,0,0.0,0.0
+Q476028,association football club,57,52,35,0,61.4,0.0
+Q207326,summit,55,1,0,0,0.0,0.0
+Q43229,organization,52,51,16,3,30.8,5.8
+Q46135307,nation at sport competition,51,33,0,1,0.0,2.0
+Q17018380,bight,51,0,0,0,0.0,0.0
+Q16521,taxon,50,50,1,2,2.0,4.0
+Q327333,government agency,49,49,14,0,28.6,0.0
+Q1288568,modern language,47,45,3,43,6.4,91.5
+Q123705,neighborhood,45,44,12,2,26.7,4.4
+Q41710,ethnic group,44,44,4,25,9.1,56.8
+Q39594,bay,43,0,0,0,0.0,0.0
+Q473972,protected area,43,41,5,1,11.6,2.3
+Q34770,language,42,40,1,37,2.4,88.1
+Q166735,swamp,42,0,0,1,0.0,2.4
+Q23397,lake,42,29,20,26,47.6,61.9
+Q15911738,hydroelectric power station,41,40,0,1,0.0,2.4
+Q4989906,monument,39,13,3,1,7.7,2.6
+Q74817647,aspect in a geographic region,38,37,2,0,5.3,0.0
+Q30198,marsh,37,0,0,2,0.0,5.4
+Q56061,administrative territorial entity,37,22,6,6,16.2,16.2
+Q3914,school,35,34,15,0,42.9,0.0
+Q7315273,forest reserve,33,32,4,0,12.1,0.0
+Q1248784,airport,33,31,0,1,0.0,3.0
+Q269770,boarding school,31,24,14,0,45.2,0.0
+Q192611,electoral unit,31,18,12,17,38.7,54.8
+Q33506,museum,30,19,5,0,16.7,0.0
+Q41176,building,29,17,4,0,13.8,0.0
+Q159334,secondary school,27,19,7,0,25.9,0.0
+Q27686,hotel,27,13,4,0,14.8,0.0
+Q783794,company,27,25,2,0,7.4,0.0
+Q163740,nonprofit organization,25,22,4,1,16.0,4.0
+Q18340514,events in a specific year or time period,23,17,0,0,0.0,0.0
+Q55463449,intermittent wetland,22,0,0,0,0.0,0.0
+Q902814,border city,22,22,14,8,63.6,36.4
+Q3957,town,22,19,11,11,50.0,50.0
+Q4671277,academic institution,21,21,8,0,38.1,0.0
+Q110977456,municipality of Uganda,21,2,2,2,9.5,9.5
+Q26213387,Olympic delegation,20,19,0,0,0.0,0.0
+Q3917681,embassy,20,3,0,0,0.0,0.0
+Q79913,non-governmental organization,20,18,8,1,40.0,5.0
+Q178561,battle,19,19,1,0,5.3,0.0
+Q2473864,Uganda International Badminton Championships,19,0,0,0,0.0,0.0
+Q11032,newspaper,18,18,2,0,11.1,0.0
+Q622499,refugee camp,18,17,3,3,16.7,16.7
+Q515,city,18,16,14,16,77.8,88.9
+Q2065736,cultural property,18,3,2,1,11.1,5.6
+Q4164871,position,18,17,10,1,55.6,5.6
+Q16465938,seasonal river,17,0,0,17,0.0,100.0
+Q740445,mountain ridge,17,0,0,0,0.0,0.0
+Q15642541,human-geographic territorial entity,17,17,5,6,29.4,35.3
+Q46970,airline,17,15,5,0,29.4,0.0
+Q7278,political party,17,16,9,0,52.9,0.0
+Q107357104,type of dance,17,10,14,4,82.4,23.5
+Q56242215,Catholic cathedral,17,2,1,0,5.9,0.0
+Q811979,built structure,16,16,4,0,25.0,0.0
+Q16970,church building,16,6,3,0,18.8,0.0
+Q2485448,sports governing body,16,12,2,0,12.5,0.0
+Q34038,waterfall,16,9,1,1,6.2,6.2
+Q132733738,ministry of Uganda,15,15,6,0,40.0,0.0
