@@ -1,0 +1,103 @@
+/* edition.css: styles for uganda_largest_edition.html.
+   Expects tokens.css and shell.css to be loaded first. */
+body { line-height: 1.6; }
+.wrap { max-width: 1180px; }
+
+/* header and section headings */
+header { margin-bottom: 40px; }
+h1 { font-size: 32px; line-height: 1.2; margin: 0 0 16px;
+  letter-spacing: -.021em; max-width: 30ch; }
+.lede { font-size: 17px; color: var(--text2); margin: 0; max-width: 68ch; }
+.stamp { font-size: 13px; color: var(--muted); margin: 18px 0 0;
+  padding-top: 14px; border-top: 1px solid var(--border); max-width: 68ch; }
+
+h2 { font-size: 13px; letter-spacing: .09em; text-transform: uppercase;
+  color: var(--muted); margin: 58px 0 8px; font-weight: 600; }
+.h2sub { margin: 0 0 22px; color: var(--text2); max-width: 72ch; }
+
+/* stat tiles */
+.tiles { display: grid; gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(196px, 1fr)); }
+.tile { background: var(--surface); border: 1px solid var(--border);
+  border-radius: 10px; padding: 18px; box-shadow: var(--shadow); }
+.tile .k { font-size: 11.5px; color: var(--muted); margin: 0 0 9px;
+  letter-spacing: .05em; text-transform: uppercase; }
+.tile .v { font-size: 29px; line-height: 1.05; letter-spacing: -.02em; }
+.tile .d { font-size: 13px; color: var(--text2); margin: 7px 0 0; }
+
+/* primary-type bars */
+.bars { margin: 4px 0 0; }
+.bar-row { display: grid; grid-template-columns: 232px 1fr 62px;
+  align-items: center; gap: 12px; padding: 5px 0; }
+.bar-label { font-size: 13px; color: var(--text2); text-align: right; }
+.bar-track { height: 14px; }
+.bar-fill { height: 14px; background: var(--s1);
+  border-radius: 0 4px 4px 0; min-width: 2px; }
+.bar-val { font-size: 12.5px; color: var(--text2);
+  font-variant-numeric: tabular-nums; }
+.note { font-size: 13px; color: var(--text2); margin: 16px 0 0;
+  padding-top: 12px; border-top: 1px solid var(--border); max-width: 72ch; }
+
+/* filter controls: hidden until JS confirms it can drive them, so a
+   no-JS reader gets the full table rather than a dead search box */
+.controls { display: none; margin: 0 0 14px; }
+.js .controls { display: block; }
+.find { width: 100%; max-width: 460px; font: inherit; font-size: 14px;
+  color: var(--text); background: var(--surface); padding: 9px 13px;
+  border: 1px solid var(--border); border-radius: 8px; }
+.find:focus { outline: 2px solid var(--s1); outline-offset: 1px; }
+.find::placeholder { color: var(--muted); }
+.chipfilters { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0 0; }
+.chipfilter { font: inherit; font-size: 12.5px; color: var(--text2);
+  background: transparent; border: 1px solid var(--border);
+  border-radius: 7px; padding: 5px 11px; cursor: pointer; }
+.chipfilter:hover { color: var(--text); border-color: var(--baseline); }
+.chipfilter.active { background: var(--surface); color: var(--text);
+  border-color: var(--baseline); font-weight: 600; box-shadow: var(--shadow); }
+.chipfilter .n { color: var(--muted); font-weight: 400;
+  font-variant-numeric: tabular-nums; }
+.count { font-size: 12.5px; color: var(--muted); margin: 12px 0 0;
+  font-variant-numeric: tabular-nums; }
+
+/* the list */
+table.itemlist { width: 100%; border-collapse: collapse; font-size: 13px;
+  min-width: 900px; }
+.itemlist th, .itemlist td { text-align: left; padding: 7px 10px;
+  border-bottom: 1px solid var(--border); vertical-align: top; }
+/* shell.css sets .num right-aligned, but `td.num` and `.itemlist td` carry
+   equal specificity and this sheet loads later, so restate it scoped. */
+.itemlist td.num, .itemlist th.num { text-align: right; }
+.itemlist tbody tr:hover { background: var(--wash); }
+tr[hidden] { display: none; }
+td.dim, .dim { color: var(--text2); }
+.nolabel { color: var(--muted); font-style: italic; }
+.mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 12px; }
+
+/* category chips, tinted from the palette so both themes hold up */
+.chip { display: inline-block; font-size: 11px; letter-spacing: .04em;
+  padding: 2px 7px; border-radius: 5px; white-space: nowrap;
+  background: var(--wash); color: var(--text2); }
+.chip.people { background: color-mix(in srgb, var(--s2) 20%, transparent);
+  color: var(--s2); font-weight: 600; }
+.chip.places { background: color-mix(in srgb, var(--s1) 16%, transparent);
+  color: var(--s1); }
+.chip.institutions { background: color-mix(in srgb, var(--s3) 18%, transparent);
+  color: var(--s3); }
+
+.weak { font-size: 10.5px; letter-spacing: .04em; text-transform: uppercase;
+  color: var(--muted); border: 1px solid var(--border); border-radius: 4px;
+  padding: 1px 5px; margin-left: 6px; white-space: nowrap; cursor: help; }
+
+footer { margin-top: 60px; padding-top: 20px;
+  border-top: 1px solid var(--border); font-size: 13px; color: var(--text2); }
+footer p { max-width: 76ch; }
+code { font-size: 12.5px; background: var(--wash); padding: 1px 5px;
+  border-radius: 4px; }
+
+@media (max-width: 640px) {
+  h1 { font-size: 26px; } .wrap { padding: 36px 16px 72px; }
+  .tile .v { font-size: 25px; }
+  .bar-row { grid-template-columns: 150px 1fr 52px; gap: 8px; }
+  .bar-label { font-size: 12px; }
+}

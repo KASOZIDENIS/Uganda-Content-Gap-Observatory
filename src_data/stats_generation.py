@@ -363,31 +363,8 @@ def generate_topical_coverage(conn, force=False):
 
 # Coarse buckets used to describe what an edition's Uganda content is *made of*.
 # Matched against Wikidata type labels, so no QIDs to go stale.
-PLACE_WORDS = (
-    'stream', 'hill', 'river', 'mountain', 'island', 'lake', 'waterfall',
-    'settlement', 'village', 'town', 'municipality', 'district', 'sub-county',
-    'county', 'parish', 'territorial entity', 'valley', 'swamp',
-    'protected area', 'national park', 'peak', 'plain', 'forest',
-)
-# 'city' is deliberately absent: as a substring it also matches "electricity".
-# 'settlement', 'town' and 'municipality' already cover populated places.
-INSTITUTION_WORDS = (
-    'school', 'university', 'college', 'hospital', 'clinic', 'business',
-    'company', 'organization', 'organisation', 'club', 'team', 'bank',
-    'agency', 'ministry', 'party', 'church', 'mosque', 'institute',
-    'enterprise', 'newspaper', 'radio', 'station', 'hotel',
-)
-
-
-def _bucket(type_labels, is_person):
-    if is_person:
-        return 'people'
-    joined = type_labels.lower()
-    if any(word in joined for word in PLACE_WORDS):
-        return 'places'
-    if any(word in joined for word in INSTITUTION_WORDS):
-        return 'institutions'
-    return 'other'
+# Bucket rules live in config, shared with the presentation layer.
+_bucket = config.bucket_of
 
 
 def generate_edition_composition(conn, force=False):

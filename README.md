@@ -105,19 +105,37 @@ src_data/
   run_all.py             orchestrator
   reset_stage.py         clear a stage's checkpoint so it re-runs
 src_viz/
+  render.py              esc/fmt and the stylesheet link block, shared
   build_dashboard.py     renders the findings to uganda_content_gap.html
+  build_edition_list.py  renders uganda_largest_edition.html
 assets/css/
   tokens.css             design tokens, generated from build_dashboard.py
-  shell.css              chrome shared by both pages (reset, tab bar, links)
+  shell.css              chrome shared by all pages (reset, tab bar, links)
   dashboard.css          uganda_content_gap.html
   plan.css               uganda_gap_action_plan.html
+  edition.css            uganda_largest_edition.html
 data/                    uganda_diversity.db + CSV exports
 ```
 
-The two pages are plain HTML linking those sheets, and cross-link to each
-other by filename, so the pair opens straight from disk. `tokens.css` is
-generated: the palette lives in `build_dashboard.py` because the chart JS
-needs it too, so the build writes it out rather than keeping two copies.
+Three pages, all plain HTML linking those sheets and cross-linking by
+filename, so the set opens straight from disk:
+
+| Page | What it is |
+|---|---|
+| `uganda_content_gap.html` | the findings and charts, generated |
+| `uganda_gap_action_plan.html` | the recommendations, hand-maintained |
+| `uganda_largest_edition.html` | every Uganda article in the largest edition, generated |
+
+`tokens.css` is generated: the palette lives in `build_dashboard.py` because
+the chart JS needs it too, so the build writes it out rather than keeping two
+copies. The tab bar comes from `config.PAGES`, so the generated pages pick up
+a new page automatically; the hand-maintained plan page needs its nav edited.
+
+The edition page is the drill-down behind the dashboard's claim that the
+largest Uganda encyclopedia holds two biographies. It lists all of that
+edition's Uganda articles with the Wikidata type that put each one there, and
+it reads the ranking from the data rather than naming an edition, so it
+follows whichever edition leads in a given cycle.
 
 ## Running it
 
@@ -126,7 +144,11 @@ pip install -r requirements.txt
 cd src_data
 python run_all.py                 # ~15-20 min on a cold cache
 python ../src_viz/build_dashboard.py
+python ../src_viz/build_edition_list.py
 ```
+
+Both builders read only `uganda_diversity.db`, so once the pipeline has run
+the pages rebuild offline in a second.
 
 Every stage is checkpointed per calendar month in the `run_log` table, so an
 interrupted run resumes instead of restarting, and re-running in a new month

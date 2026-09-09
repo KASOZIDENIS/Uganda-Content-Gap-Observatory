@@ -10,7 +10,6 @@ by this module from the LIGHT/DARK palettes below, which the chart JS also
 reads, so the palette is defined once.
 """
 
-import html
 import json
 import os
 import sqlite3
@@ -21,6 +20,8 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)),
 
 import config      # noqa: E402
 import ug_utils    # noqa: E402
+import render     # noqa: E402
+from render import esc, fmt   # noqa: E402
 
 OUT_FILE = os.path.join(config.PROJECT_PATH, 'uganda_content_gap.html')
 # Both pages read their palette from this generated sheet, so LIGHT/DARK
@@ -57,15 +58,6 @@ STATUS = {'good': '#0ca30c', 'critical': '#d03b3b'}
 BOT_HEAVY = {'ceb', 'sw', 'arz', 'war', 'nl', 'vi', 'uz', 'azb', 'ce'}
 
 
-def esc(text):
-    return html.escape(str(text) if text is not None else '')
-
-
-def fmt(number):
-    try:
-        return f'{int(round(float(number))):,}'
-    except (TypeError, ValueError):
-        return '-'
 
 
 def pct(part, whole, digits=1):
@@ -414,10 +406,7 @@ def build(d):
     payload = json.dumps({'charts': charts, 'light': LIGHT, 'dark': DARK},
                          separators=(',', ':'))
 
-    return f"""<title>Uganda Content Gap</title>
-<link rel="stylesheet" href="assets/css/tokens.css">
-<link rel="stylesheet" href="assets/css/shell.css">
-<link rel="stylesheet" href="assets/css/dashboard.css">
+    return f"""{render.head('Uganda Content Gap', 'dashboard.css')}
 
 <div class="wrap">
 {config.tab_bar('dashboard')}
@@ -447,7 +436,9 @@ def build(d):
   <div class="tile">
     <p class="k">Largest edition</p>
     <div class="v">{esc(top_edition['languagecode'])} &middot; {fmt(top_edition['n'])}</div>
-    <p class="d">{'holds just ' + fmt(top_comp['people']) + ' biographies' if top_comp else 'articles'}</p>
+    <p class="d">{'holds just ' + fmt(top_comp['people']) + ' biographies' if top_comp else 'articles'}
+    &middot; <a href="{config.page_href('edition')}">see all
+    {fmt(top_edition['n'])}</a></p>
   </div>
   <div class="tile">
     <p class="k">Luganda Wikipedia</p>

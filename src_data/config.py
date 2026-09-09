@@ -27,6 +27,7 @@ os.makedirs(DOCS_PATH, exist_ok=True)
 PAGES = [
     ('dashboard', 'Findings &amp; data', 'uganda_content_gap.html'),
     ('plan', 'Action plan', 'uganda_gap_action_plan.html'),
+    ('edition', 'Largest edition', 'uganda_largest_edition.html'),
 ]
 
 
@@ -137,6 +138,43 @@ TITLE_KEYWORDS = [
     'Uganda', 'Ugandan', 'Kampala', 'Entebbe', 'Buganda', 'Busoga',
     'Bunyoro', 'Toro Kingdom', 'Ankole', 'Karamoja', 'Acholi',
 ]
+
+# ---------------------------------------------------------------- type buckets
+# Wikidata type labels are matched as substrings to sort an item into one of
+# four buckets. This lives here rather than in stats_generation because the
+# presentation layer classifies rows too, and one keyword list beats two.
+PLACE_WORDS = (
+    'stream', 'hill', 'river', 'mountain', 'island', 'lake', 'waterfall',
+    'settlement', 'village', 'town', 'municipality', 'district', 'sub-county',
+    'county', 'parish', 'territorial entity', 'valley', 'swamp',
+    'protected area', 'national park', 'peak', 'plain', 'forest',
+)
+# 'city' is deliberately absent: as a substring it also matches "electricity".
+# 'settlement', 'town' and 'municipality' already cover populated places.
+INSTITUTION_WORDS = (
+    'school', 'university', 'college', 'hospital', 'clinic', 'business',
+    'company', 'organization', 'organisation', 'club', 'team', 'bank',
+    'agency', 'ministry', 'party', 'church', 'mosque', 'institute',
+    'enterprise', 'newspaper', 'radio', 'station', 'hotel',
+)
+
+BUCKET_LABELS = {
+    'people': 'People', 'places': 'Places & nature',
+    'institutions': 'Institutions', 'other': 'Everything else',
+}
+
+
+def bucket_of(type_labels, is_person):
+    """Sort one item into people / places / institutions / other."""
+    if is_person:
+        return 'people'
+    joined = (type_labels or '').lower()
+    if any(word in joined for word in PLACE_WORDS):
+        return 'places'
+    if any(word in joined for word in INSTITUTION_WORDS):
+        return 'institutions'
+    return 'other'
+
 
 # ---------------------------------------------------------------- tuning
 SPARQL_CHUNK_SIZE = 700        # QIDs per chunked VALUES query
