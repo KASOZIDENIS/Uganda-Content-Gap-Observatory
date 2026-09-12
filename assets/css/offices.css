@@ -1,0 +1,61 @@
+/* offices.css: what is specific to uganda_women_in_office.html.
+   Expects tokens.css, shell.css and components.css to be loaded first. */
+body { line-height: 1.6; }
+.wrap { max-width: 1200px; }
+
+/* position names are long, so the bar label takes the widest column here */
+.bar-row { grid-template-columns: 300px 1fr 96px; }
+
+.itemlist { min-width: 1080px; }
+
+/* the small summary tables: narrower and quieter than the main list */
+table.plain { width: 100%; border-collapse: collapse; font-size: 13.5px;
+  max-width: 760px; }
+.plain th, .plain td { text-align: left; padding: 8px 10px;
+  border-bottom: 1px solid var(--border); }
+.plain td.num, .plain th.num { text-align: right;
+  font-variant-numeric: tabular-nums; }
+.plain tbody tr:hover { background: var(--wash); }
+
+/* inline coverage meter in the by-tier table */
+.minibar { width: 120px; height: 8px; background: var(--wash);
+  border-radius: 4px; overflow: hidden; }
+.minibar-fill { height: 8px; background: var(--s3); border-radius: 4px;
+  min-width: 2px; }
+
+
+/* level-of-office chips, coolest to warmest by seniority */
+.chip.t-executive { background: color-mix(in srgb, var(--s2) 20%, transparent);
+  color: var(--s2); font-weight: 600; }
+.chip.t-judiciary { background: color-mix(in srgb, var(--s3) 20%, transparent);
+  color: var(--s3); font-weight: 600; }
+.chip.t-diplomatic { background: color-mix(in srgb, var(--s1) 20%, transparent);
+  color: var(--s1); font-weight: 600; }
+.chip.t-legislature { background: color-mix(in srgb, var(--s1) 13%, transparent);
+  color: var(--s1); }
+.chip.t-public_service { background: color-mix(in srgb, var(--s3) 13%, transparent);
+  color: var(--s3); }
+.chip.t-local_government { background: color-mix(in srgb, var(--s2) 12%, transparent);
+  color: var(--s2); }
+
+/* article-status chips: the two that mean work stand out, the rest recede */
+.chip.s-none { background: color-mix(in srgb, var(--critical) 18%, transparent);
+  color: var(--critical); font-weight: 600; }
+.chip.s-translate { background: color-mix(in srgb, var(--s2) 20%, transparent);
+  color: var(--s2); font-weight: 600; }
+.chip.s-both { background: color-mix(in srgb, var(--good) 15%, transparent);
+  color: var(--good); }
+
+.noflag { font-size: 10.5px; letter-spacing: .04em; text-transform: uppercase;
+  color: var(--muted); border: 1px solid var(--border); border-radius: 4px;
+  padding: 1px 5px; margin-left: 6px; white-space: nowrap; cursor: help; }
+
+/* kept here rather than in components.css: a mobile override there would be
+   beaten by this sheet's own .bar-row and .wrap rules above */
+@media (max-width: 640px) {
+  h1 { font-size: 26px; } .wrap { padding: 36px 16px 72px; }
+  .tile .v { font-size: 25px; }
+  .bar-row { grid-template-columns: 150px 1fr 74px; gap: 8px; }
+  .bar-label { font-size: 12px; }
+  .minibar { width: 64px; }
+}

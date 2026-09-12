@@ -9,41 +9,63 @@ Counting those as "missing" would drown the signal, so they are tracked
 separately as the wikidata_only mass instead.
 """
 
+import datetime
+import html
 import os
+
+# ---------------------------------------------------------------- cycle
+def cycle_year_month():
+    """The data cycle a run belongs to, e.g. '2026-09'.
+
+    Lives here rather than in ug_utils so that the page builders can stamp a
+    cycle without importing the network layer.
+    """
+    return datetime.date.today().strftime('%Y-%m')
+
 
 # ---------------------------------------------------------------- paths
 PROJECT_PATH = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_PATH = os.path.join(PROJECT_PATH, 'data')
-DOCS_PATH = os.path.join(PROJECT_PATH, 'docs')
 DB_FILE = os.path.join(DATA_PATH, 'uganda_diversity.db')
 
 os.makedirs(DATA_PATH, exist_ok=True)
-os.makedirs(DOCS_PATH, exist_ok=True)
 
 # ---------------------------------------------------------------- published pages
-# The two pages, which cross-link to each other as tabs. Kept here so the tab
-# bar is defined in one place rather than in each page. The href is the sibling
-# filename, so the pair browses from disk with no scripting and no account.
+# The published pages, which cross-link to each other as tabs. Kept here so the
+# tab bar is defined in one place rather than repeated in every page. The href is
+# the sibling filename, so the set browses from disk with no scripting and no
+# account.
 PAGES = [
-    ('dashboard', 'Findings &amp; data', 'uganda_content_gap.html'),
+    ('dashboard', 'Findings & data', 'uganda_content_gap.html'),
     ('plan', 'Action plan', 'uganda_gap_action_plan.html'),
     ('edition', 'Largest edition', 'uganda_largest_edition.html'),
+    ('topics', 'Topic areas', 'uganda_topic_areas.html'),
+    ('osm', 'OpenStreetMap', 'uganda_openstreetmap.html'),
+    ('registers', 'Official registers', 'uganda_official_registers.html'),
+    ('offices', 'Women in office', 'uganda_women_in_office.html'),
+    ('undocumented', 'Undocumented women', 'uganda_undocumented_women.html'),
+    ('undocumented_men', 'Undocumented men', 'uganda_undocumented_men.html'),
 ]
 
 
 def page_href(key):
-    """The sibling filename for a page key, for linking between the two pages."""
+    """The sibling filename for a page key, for linking one page to another."""
     return next(href for k, _label, href in PAGES if k == key)
 
 
 def tab_bar(current):
-    """Render the shared tab bar, marking `current` as the active page."""
+    """Render the shared tab bar, marking `current` as the active page.
+
+    render.tab_bar() renders the same PAGES list from the nav block the
+    view models carry; this is the copy the pipeline itself uses.
+    """
     tabs = []
     for key, label, href in PAGES:
+        safe = html.escape(label)
         if key == current:
-            tabs.append(f'<span class="tab active" aria-current="page">{label}</span>')
+            tabs.append(f'<span class="tab active" aria-current="page">{safe}</span>')
         else:
-            tabs.append(f'<a class="tab" href="{href}">{label}</a>')
+            tabs.append(f'<a class="tab" href="{href}">{safe}</a>')
     return ('<nav class="tabs" aria-label="Uganda content gap pages">'
             + ''.join(tabs) + '</nav>')
 
@@ -139,6 +161,24 @@ TITLE_KEYWORDS = [
     'Bunyoro', 'Toro Kingdom', 'Ankole', 'Karamoja', 'Acholi',
 ]
 
+# ---------------------------------------------------------------- rosters
+# Office holders gathered outside Wikimedia, one file per cohort. A woman or
+# man absent from both Wikidata and Wikipedia cannot be found by querying
+# either, so the roster is the input and src_data/roster_check.py looks each
+# name up. Add a cohort here and it flows through the stage and the pages.
+ROSTERS = (
+    ('women', 'roster_women_offices.csv', 'Ugandan women in senior office'),
+    ('men', 'roster_men_offices.csv', 'Ugandan men in senior office'),
+)
+
+
+def roster_file(cohort):
+    for key, name, _label in ROSTERS:
+        if key == cohort:
+            return name
+    raise KeyError(cohort)
+
+
 # ---------------------------------------------------------------- type buckets
 # Wikidata type labels are matched as substrings to sort an item into one of
 # four buckets. This lives here rather than in stats_generation because the
@@ -173,6 +213,64 @@ def bucket_of(type_labels, is_person):
         return 'places'
     if any(word in joined for word in INSTITUTION_WORDS):
         return 'institutions'
+    return 'other'
+
+
+# ---------------------------------------------------------------- offices
+# Wikidata records what office someone held as P39 (position held), and the
+# position labels are free text, so seniority has to be inferred by matching
+# them. Checked in order and the first hit wins, which is what resolves the
+# overlaps: "Justice Minister of Uganda" is a cabinet post rather than a
+# judicial one, and "permanent representative" is a diplomat rather than an MP.
+#
+# Anything that matches nothing here is deliberately not called an office.
+# That drops academic and corporate roles (dean, chief executive officer,
+# managing director), sports captaincies, and ceremonial positions such as
+# First Lady, none of which are public office in the sense this page means.
+OFFICE_TIERS = (
+    ('executive', 'National executive', (
+        'president of uganda', 'vice president', 'vice-president',
+        'prime minister', 'minister', 'cabinet', 'attorney general')),
+    ('judiciary', 'Judiciary', (
+        'chief justice', 'justice', 'judge', 'magistrate')),
+    ('diplomatic', 'Diplomatic service', (
+        'ambassador', 'high commissioner', 'permanent representative',
+        'consul', 'envoy')),
+    ('legislature', 'Parliament', (
+        'parliament', 'speaker', 'leader of opposition', 'representative',
+        'senator', 'legislative')),
+    ('public_service', 'Public service', (
+        'permanent secretary', 'director general', 'director-general',
+        'inspector general', 'solicitor general', 'auditor general',
+        'commissioner', 'governor')),
+    ('local_government', 'Local government', (
+        'mayor', 'lc5', 'district chairperson', 'town clerk', 'municipal')),
+)
+
+# Tiers that count as holding public office, most senior first. The remainder
+# is the 'other' bucket, which the page shows but does not count.
+BIG_OFFICE_TIERS = tuple(key for key, _label, _words in OFFICE_TIERS)
+
+TIER_LABELS = dict(
+    [(key, label) for key, label, _words in OFFICE_TIERS]
+    + [('other', 'Not a public office')])
+
+
+def office_tier(position_label):
+    """Sort one P39 position label into a tier, or 'other'."""
+    text = (position_label or '').lower()
+    for key, _label, words in OFFICE_TIERS:
+        if any(word in text for word in words):
+            return key
+    return 'other'
+
+
+def most_senior_tier(position_labels):
+    """The most senior tier among the positions one person has held."""
+    tiers = {office_tier(name) for name in position_labels}
+    for key in BIG_OFFICE_TIERS:
+        if key in tiers:
+            return key
     return 'other'
 
 

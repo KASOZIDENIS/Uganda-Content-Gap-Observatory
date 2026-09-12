@@ -1,0 +1,168 @@
+position_qid,position_label,tier,holders,with_article,no_article,needs_lg
+Q21296005,Member of Parliament of Uganda,legislature,347,273,74,0
+Q486839,member of parliament,legislature,148,116,32,1
+Q139505853,District Woman Representative,legislature,99,74,25,0
+Q83307,minister,executive,10,4,6,0
+Q139505855,City Woman Representative,legislature,9,7,2,0
+Q140850979,Ex officio member of Parliament of Uganda,legislature,8,6,2,0
+Q484876,chief executive officer,other,8,3,5,0
+Q111759032,permanent secretary,public_service,7,1,6,0
+Q267936,executive director,other,7,4,3,0
+Q110312559,Justice of the Supreme Court of Uganda,judiciary,5,5,0,0
+Q1162163,director,other,5,3,2,0
+Q140686,chairperson,other,5,3,2,0
+Q30185,mayor,local_government,4,4,0,0
+Q723682,dean,other,4,2,2,0
+Q113130234,Minister of Education and Sports,executive,3,3,0,0
+Q121998,ambassador,diplomatic,3,3,0,0
+Q139505857,Older Persons Representative,legislature,3,2,1,0
+Q1569495,lecturer,other,3,0,3,0
+Q19940089,managing director,other,3,1,2,0
+Q24975603,Deputy Vice Chancellor,other,3,1,2,0
+Q54833669,ambassador of France to Uganda,diplomatic,3,2,1,0
+Q708492,council member,other,3,3,0,1
+Q715772,captain,other,3,1,2,0
+Q82955,politician,other,3,3,0,0
+Q9344260,associate professor,other,3,1,2,0
+Q95328084,First Lady of Uganda,other,3,3,0,0
+Q104668229,Deputy Prime Minister of Uganda,executive,2,2,0,0
+Q1056391,head teacher,other,2,0,2,0
+Q108392983,ambassador of Uganda,diplomatic,2,2,0,1
+Q108393041,ambassador of Uganda to the United States,diplomatic,2,1,1,0
+Q113130174,Speaker of the Parliament of Uganda,legislature,2,2,0,0
+Q113130231,"Minister of Agriculture, Animal Industry and Fisheries",executive,2,2,0,0
+Q113130244,Minister of State for Economic Monitoring,executive,2,2,0,0
+Q116753281,Chairperson LC5,local_government,2,1,1,0
+Q123036378,board chairman,other,2,0,2,0
+Q124260455,President of The Uganda Society,other,2,2,0,1
+Q1255921,president,other,2,0,2,0
+Q139505856,Workers Representative,legislature,2,0,2,0
+Q2632935,minister of state,executive,2,2,0,0
+Q28457538,Leader of Opposition,legislature,2,2,0,0
+Q30277603,Member of the Pan-African Parliament,legislature,2,2,0,0
+Q45916492,co-founder,other,2,1,1,0
+Q524778,commissioner,public_service,2,1,1,0
+Q56760962,High Commissioner of the United Kingdom to Uganda,diplomatic,2,0,2,0
+Q584540,captain,other,2,0,2,0
+Q68838127,university librarian,other,2,1,1,0
+Q7877604,Uganda Law Society,other,2,2,0,1
+Q98966310,Finance Minister of Uganda,executive,2,2,0,0
+Q1036,Uganda,other,1,1,0,0
+Q104680,colonel,other,1,0,1,0
+Q104845929,Ligomarc Advocates,other,1,1,0,0
+Q107070290,team manager,other,1,0,1,0
+Q112235161,ambassador of Spain to Senegal,diplomatic,1,1,0,0
+Q1125292,postdoctoral researcher,other,1,0,1,0
+Q112658314,Minister of Health of Uganda,executive,1,1,0,0
+Q112707306,Deputy Minister of Public Service,executive,1,1,0,0
+Q1127270,deputy chairperson,other,1,1,0,0
+Q11285807,RDC,other,1,1,0,0
+Q113130195,"Minister of Gender, Labour and Social Development",executive,1,1,0,0
+Q113130203,Minister of State in the Office of the Vice President,executive,1,1,0,0
+Q113130228,Leader of Government Business in Parliament,legislature,1,1,0,0
+Q113130229,Minister for East African Community Affairs,executive,1,1,0,0
+Q113130230,Minister in Charge of General Duties in the Office of the Prime Minister,executive,1,1,0,0
+Q113130235,Minister of Energy and Minerals,executive,1,1,0,0
+Q113130237,Minister of Kampala Capital City Authority,executive,1,1,0,0
+Q113130238,"Minister of Lands, Housing and Urban Development",executive,1,1,0,0
+Q113130242,"Minister of Science, Technology and Innovation",executive,1,1,0,0
+Q113130246,Minister of State for Youth and Children Affairs,executive,1,1,0,0
+Q113130249,Minister of the Presidency,executive,1,1,0,0
+Q113130250,Minister without Portfolio,executive,1,1,0,0
+Q113130338,State Minister for Water Resources,executive,1,1,0,0
+Q113130339,State Minister for Luweero Triangle and Rwenzori Region,executive,1,1,0,0
+Q113130342,State Minister for the Environment,executive,1,1,0,0
+Q113130343,State Minister for Animal Industry,executive,1,1,0,0
+Q113130348,State Minister for Disaster Preparedness and Refugees,executive,1,1,0,0
+Q113130349,State Minister of Finance for Investment and Privatization,executive,1,1,0,0
+Q113130351,State Minister for Northern Uganda,executive,1,1,0,0
+Q113130352,State Minister for Public Service,executive,1,1,0,0
+Q113130355,State Minister for Fisheries,executive,1,1,0,0
+Q113130357,State Minister for the Disabled,executive,1,1,0,0
+Q113130360,State Minister for Bunyoro Affairs,executive,1,1,0,0
+Q113130363,State Minister for Primary Education,executive,1,1,0,0
+Q113130364,State Minister for Information Technology and Communications,executive,1,1,0,0
+Q113130368,State Minister for Gender and Culture,executive,1,1,0,0
+Q113130369,State Minister for Housing,executive,1,1,0,0
+Q113130371,State Minister for Ethics and Integrity,executive,1,1,0,0
+Q113130372,State Minister for Local Government,executive,1,1,0,0
+Q113130395,State Minister for Karamoja,executive,1,1,0,0
+Q113130407,State Minister for Agriculture,executive,1,1,0,0
+Q113130408,State Minister for Transport,executive,1,1,0,0
+Q113130412,State Minister for Veterans Affairs,executive,1,1,0,0
+Q113130414,State Minister of Health for General Duties,executive,1,1,0,0
+Q113130415,State Minister of Health for Primary Care,executive,1,1,0,0
+Q113130416,State Minister for Tourism,executive,1,1,0,0
+Q113130417,State Minister for Lands,executive,1,1,0,0
+Q113625346,Ambassador of Spain to Ivory Coast,diplomatic,1,1,0,0
+Q113625372,Ambassador of Spain to Liberia,diplomatic,1,1,0,0
+Q113660142,Ambassador of Spain to Burkina Fasso,diplomatic,1,1,0,0
+Q114592544,project officer,other,1,0,1,0
+Q11699572,inspector general of Police,public_service,1,1,0,0
+Q117101599,Ambassador of Spain to Somalia,diplomatic,1,1,0,0
+Q117112825,Ambassador of Spain to Uganda,diplomatic,1,1,0,0
+Q11798659,brand manager,other,1,0,1,0
+Q121594,professor,other,1,1,0,0
+Q12416358,vice-chancellor,other,1,1,0,0
+Q12492080,commissioner,public_service,1,0,1,0
+Q1266283,senior lecturer,other,1,1,0,1
+Q130404974,Member of East African Legislative Assembly,legislature,1,1,0,0
+Q1307072,Chief Whip,other,1,1,0,0
+Q133825340,Resident District Commissioner,public_service,1,0,1,0
+Q133967149,ambassador of Denmark to Uganda,diplomatic,1,0,1,0
+Q139505854,PWD Representative,legislature,1,1,0,0
+Q139505860,Female PWD Representative,legislature,1,1,0,0
+Q139505861,Female Workers Representative,legislature,1,1,0,0
+Q140933262,Female Youth Representative,legislature,1,0,1,0
+Q15176422,Lieutenant Governor of Alberta,public_service,1,1,0,1
+Q1757008,assistant director,other,1,0,1,0
+Q1792450,art historian,other,1,1,0,0
+Q1891880,education assistant,other,1,0,1,0
+Q193592,midfielder,other,1,1,0,0
+Q1969425,national team coach,other,1,1,0,0
+Q19926443,President of the International Court of Justice,judiciary,1,1,0,0
+Q2113250,prorector,other,1,0,1,0
+Q2306091,sociologist,other,1,1,0,1
+Q24262601,Minister of Foreign Affairs of Uganda,executive,1,1,0,0
+Q2462330,Prime Minister of Uganda,executive,1,1,0,0
+Q25203010,registrar,other,1,0,1,0
+Q2534525,chairperson of the executive board,other,1,0,1,0
+Q26255850,ambassador of France to Benin,diplomatic,1,1,0,0
+Q26265495,ambassador of France to Somalia,diplomatic,1,1,0,0
+Q28404009,Attorney General of Uganda,executive,1,1,0,0
+Q29182,bishop,other,1,0,1,0
+Q30771010,Judge of the International Court of Justice,judiciary,1,1,0,0
+Q3153784,acting president,other,1,1,0,0
+Q3316583,Miss Uganda,other,1,1,0,0
+Q336286,defender,other,1,0,1,0
+Q3556899,Vice President of Uganda,executive,1,1,0,0
+Q38184126,ambassador of France to Kenya,diplomatic,1,1,0,0
+Q40348,lawyer,other,1,1,0,0
+Q4175034,legislator,other,1,0,1,0
+Q47165815,ambassador of Spain to Kenya,diplomatic,1,1,0,0
+Q493898,Lieutenant Colonel,other,1,0,1,0
+Q5121444,intelligence officer,other,1,1,0,0
+Q5164591,consultant,diplomatic,1,0,1,0
+Q5280538,director of bands,other,1,1,0,0
+Q5327657,East African Legislative Assembly,legislature,1,0,1,0
+Q55630465,Prime minister of Rwenzururu,executive,1,1,0,0
+Q56241849,Minister of Trade and Industry,executive,1,1,0,0
+Q56760952,High Commissioner of the United Kingdom to Namibia,diplomatic,1,0,1,0
+Q56761196,ambassador of the United Kingdom to South Sudan,diplomatic,1,0,1,0
+Q57771723,"Minister of Trade, Tourism and Industry",executive,1,1,0,0
+Q581817,deputy mayor,local_government,1,1,0,0
+Q61061,chancellor,other,1,0,1,0
+Q62489725,deputy editor,other,1,0,1,0
+Q6302943,Judicial Service Commission,other,1,1,0,0
+Q65988793,Minister of Karamoja,executive,1,1,0,0
+Q66712770,deputy secretary general,other,1,1,0,0
+Q7245047,principal,other,1,1,0,0
+Q759969,supervisory board,other,1,1,0,0
+Q77226505,NEF ambassador,diplomatic,1,1,0,0
+Q80687,secretary,other,1,1,0,0
+Q859528,association football referee,other,1,0,1,0
+Q9379869,lecturer,other,1,1,0,0
+Q94450525,Vice President of the International Court of Justice,executive,1,1,0,0
+Q99030163,Justice Minister of Uganda,executive,1,1,0,0
+Q99438519,dean of students,other,1,0,1,0
+Q994779,delegate,other,1,1,0,0

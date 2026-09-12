@@ -1,0 +1,40 @@
+/* topics.css: what is specific to uganda_topic_areas.html.
+   Expects tokens.css, shell.css and components.css to be loaded first. */
+body { line-height: 1.6; }
+.wrap { max-width: 1120px; }
+
+/* area names are short, so the bars can give the plot more room */
+.bar-row { grid-template-columns: 200px 1fr 84px; }
+
+table.itemlist { min-width: 860px; }
+/* five and six numeric columns need the room, and the headers
+   otherwise run into each other */
+.plain { max-width: 100%; }
+.plain th { white-space: nowrap; }
+/* five or six numeric columns sit too close without this */
+.plain th.num, .plain td.num { padding-left: 22px; }
+.plain td:first-child, .plain th:first-child { min-width: 210px; }
+.spacer { height: 26px; }
+
+/* the two-column audit: what we missed beside what they over-collected */
+.audit { display: grid; grid-template-columns: 1fr; gap: 26px; margin-top: 4px; }
+@media (min-width: 780px) { .audit { grid-template-columns: 1fr 1fr; gap: 34px; } }
+.audit h3 { font-size: 15px; margin: 0 0 8px; }
+.audit p { color: var(--text2); margin: 0 0 12px; max-width: 52ch; }
+.startlist, .overlist { margin: 0; padding-left: 19px; color: var(--text2); }
+.startlist li { margin-bottom: 6px; }
+.startlist strong { color: var(--text); }
+.overlist { font-size: 13px; }
+.overlist li { margin-bottom: 4px; }
+
+/* the secondary areas a topic also sits under */
+.alsoin { color: var(--muted); font-size: 11.5px; white-space: nowrap; }
+
+/* kept here rather than in components.css: a mobile override there would be
+   beaten by this sheet's own .bar-row and .wrap rules above */
+@media (max-width: 640px) {
+  h1 { font-size: 26px; } .wrap { padding: 36px 16px 72px; }
+  .tile .v { font-size: 25px; }
+  .bar-row { grid-template-columns: 132px 1fr 66px; gap: 8px; }
+  .bar-label { font-size: 12px; }
+}

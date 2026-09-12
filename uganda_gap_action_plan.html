@@ -1,470 +1,70 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Uganda Gap Action Plan</title>
 <link rel="stylesheet" href="assets/css/tokens.css">
 <link rel="stylesheet" href="assets/css/shell.css">
 <link rel="stylesheet" href="assets/css/plan.css">
+<script>document.documentElement.classList.add('js')</script>
 
 <div class="wrap">
-
 <nav class="tabs" aria-label="Uganda content gap pages">
-  <a class="tab" href="uganda_content_gap.html">Findings &amp; data</a>
-  <span class="tab active" aria-current="page">Action plan</span>
-  <a class="tab" href="uganda_largest_edition.html">Largest edition</a>
+<a class="tab" href="uganda_content_gap.html">Findings &amp; data</a>
+<span class="tab active" aria-current="page">Action plan</span>
+<a class="tab" href="uganda_largest_edition.html">Largest edition</a>
+<a class="tab" href="uganda_topic_areas.html">Topic areas</a>
+<a class="tab" href="uganda_openstreetmap.html">OpenStreetMap</a>
+<a class="tab" href="uganda_official_registers.html">Official registers</a>
+<a class="tab" href="uganda_women_in_office.html">Women in office</a>
+<a class="tab" href="uganda_undocumented_women.html">Undocumented women</a>
+<a class="tab" href="uganda_undocumented_men.html">Undocumented men</a>
 </nav>
-
 <header>
-  <p class="eyebrow">Content Gap Analysis Wikimedia Community User Group Uganda</p>
-  <h1>What Uganda's content gaps actually are, and how to close them</h1>
-  <p class="lede">A measured baseline of Uganda's presence across Wikipedia's 343
-  language editions, and eight recommendations that follow from it. Two of them
-  redirect work the community is most likely doing already; two more supply
-  content to Wikipedia projects that are already in flight.</p>
-  <p class="stamp"><strong>Baseline: cycle 2026-09.</strong> The numbers on this
-  page are deliberately frozen: a plan needs a fixed starting line to
-  measure against. Living figures are in the
-   <a class="tab" href="uganda_content_gap.html">companion
-  dashboard</a>, which re-runs monthly.</p>
+<p class="eyebrow">Content Gap Analysis Wikimedia Community User Group Uganda</p>
+<h1>What Uganda's content gaps actually are, and how to close them</h1>
+<p class="lede">A measured baseline of Uganda's presence across Wikipedia's 343 language editions, and eight recommendations that follow from it. Two of them redirect work the community is most likely doing already; two more supply content to Wikipedia projects that are already in flight.</p>
+<p class="stamp"><strong>Baseline: cycle 2026-09.</strong> The numbers on this page are deliberately frozen: a plan needs a fixed starting line to measure against. Living figures are in the <a href="uganda_content_gap.html">companion dashboard</a>, which re-runs monthly.</p>
 </header>
-
 <h2>What was measured</h2>
-<p class="h2sub">Built from public Wikidata and Wikipedia interfaces only:
-no Wikimedia Cloud account, no database replicas. It runs on a laptop in about
-20 minutes and refreshes on a monthly cycle.</p>
-
+<p class="h2sub">Built from public Wikidata and Wikipedia interfaces only: no Wikimedia Cloud account, no database replicas. It runs on a laptop in about 20 minutes and refreshes on a monthly cycle.</p>
 <div class="tiles">
-  <div class="tile">
-    <p class="k">Uganda topics</p>
-    <div class="v">14,149</div>
-    <p class="d">with an article in at least one language</p>
-  </div>
-  <div class="tile">
-    <p class="k">In Luganda</p>
-    <div class="v">3,592</div>
-    <p class="d">25% of the corpus; 62% of all of lgwiki</p>
-  </div>
-  <div class="tile alarm">
-    <p class="k">Missing from Luganda</p>
-    <div class="v">8,225</div>
-    <p class="d">topics with a structural link to Uganda</p>
-  </div>
-  <div class="tile">
-    <p class="k">Ugandan women tracked</p>
-    <div class="v">3,340</div>
-    <p class="d">2,168 have no article anywhere</p>
-  </div>
+<div class="tile"><p class="k">Uganda topics</p><div class="v">14,149</div><p class="d">with an article in at least one language</p></div>
+<div class="tile"><p class="k">In Luganda</p><div class="v">3,592</div><p class="d">25% of the corpus; 62% of all of lgwiki</p></div>
+<div class="tile alarm"><p class="k">Missing from Luganda</p><div class="v">8,225</div><p class="d">topics with a structural link to Uganda</p></div>
+<div class="tile"><p class="k">Ugandan women tracked</p><div class="v">3,340</div><p class="d">2,168 have no article anywhere</p></div>
 </div>
-
 <h2>Four findings that change the plan</h2>
-<p class="h2sub">Each of these contradicts an assumption that would otherwise
-shape programming. They are the reason the recommendations below look different
-from a standard "translate more articles" plan.</p>
-
-<div class="finding">
-  <div>
-    <h3>1. Counting articles gives the wrong answer</h3>
-    <p>The edition with the most Uganda articles is not English. It is
-    <strong>Cebuano</strong>, a Philippine language, with 6,765  and
-    <strong>two</strong> of them are biographies of Ugandans. A bot generated
-    thousands of articles about Ugandan streams, hills and sub-counties.</p>
-    <p>Luganda has 3,592 Uganda articles, of which <strong>2,634 are about
-    Ugandan people</strong>. Similar magnitude, completely different
-    encyclopedia.</p>
-  </div>
-  <div class="so-what">
-    <p class="k">So what</p>
-    <p>Article counts cannot distinguish a written encyclopedia from a generated
-    one. Any target, report or funding case built on raw counts can be satisfied
-    by a bot without serving a single reader.</p>
-    <p>Report <strong>composition</strong> (people, places, institutions),
-     not volume.</p>
-  </div>
-</div>
-
-<div class="finding">
-  <div>
-    <h3>2. The women's translation backlog is nearly gone</h3>
-    <p>Of 3,340 Ugandan women in Wikidata, 1,112 have an English article and
-    <strong>1,066 have a Luganda one</strong>. The English-to-Luganda backlog is
-    <strong>65 people</strong>.</p>
-    <p>In football and academia there is <strong>nothing left to translate</strong>;
-    Luganda carries 44 women footballers to English's 38. Nineteen Ugandan women
-    have a Luganda article and no English one. These are not stubs: median
-    length 4,410 bytes, only 12% under 2&nbsp;KB.</p>
-  </div>
-  <div class="so-what">
-    <p class="k">So what</p>
-    <p>Another "translate women's biographies into Luganda" campaign would spend
-    volunteer goodwill on a solved problem.</p>
-    <p>The gap moved: <strong>2,168 Ugandan women have no article in any
-    language</strong>. The work is now writing from sources, not translating.</p>
-  </div>
-</div>
-
-<div class="finding">
-  <div>
-    <h3>3. Luganda has people but not places</h3>
-    <p>Luganda's Uganda content splits <strong>2,634 people</strong> against
-    <strong>404 places</strong>. English splits 3,188 to 791; Swahili runs the
-    other way at 638 to 3,039.</p>
-    <p>All four of Uganda's Regions (Central, Eastern, Northern, Western)
-    have no Luganda article. Neither do the Rwenzori Mountains, Mount
-    Elgon, Lake Kyoga or the Nile, the last of which draws over 400,000 English
-    readings every six months.</p>
-  </div>
-  <div class="so-what">
-    <p class="k">So what</p>
-    <p>The gap in Luganda is not a general shortage. It is a specific, nameable
-    shortage of <strong>geography and institutions</strong>, in the language
-    spoken where that geography is.</p>
-    <p>This is a well-defined campaign with a finishable target list.</p>
-  </div>
-</div>
-
-<div class="finding">
-  <div>
-    <h3>4. Uganda is over-described as data, under-described as encyclopedia</h3>
-    <p>Wikidata holds <strong>68,587</strong> items whose country is Uganda.
-    <strong>58,240 of them (85%)  have no article in any
-    language.</strong> They are bulk-imported registries: roughly 15,000 primary
-    schools, 24,000 settlements, 4,800 parishes.</p>
-    <p>Meanwhile Luganda is still Uganda's only live Wikipedia, though
-    not for much longer. <strong>Runyankore is approved and awaiting
-    creation</strong>; <strong>Acholi is in Incubator with a request
-    pending</strong>; eight further languages have no project at all.</p>
-  </div>
-  <div class="so-what">
-    <p class="k">So what</p>
-    <p>Part of Uganda's deepest gap is not fixable by editing: <strong>data
-    without prose</strong>, and <strong>languages without a project</strong>.</p>
-    <p>But the language work is no longer purely advocacy. Two projects are
-    already in flight and need <strong>content, now</strong>. That is
-    work this analysis can supply directly.</p>
-  </div>
-</div>
-
+<p class="h2sub">Each of these contradicts an assumption that would otherwise shape programming. They are the reason the recommendations below look different from a standard "translate more articles" plan.</p>
+<div class="finding"><div><h3>1. Counting articles gives the wrong answer</h3><p>The edition with the most Uganda articles is not English. It is <strong>Cebuano</strong>, a Philippine language, with 6,765 and <strong>two</strong> of them are biographies of Ugandans. A bot generated thousands of articles about Ugandan streams, hills and sub-counties.</p><p>Luganda has 3,592 Uganda articles, of which <strong>2,634 are about Ugandan people</strong>. Similar magnitude, completely different encyclopedia.</p></div><div class="so-what"><p class="k">So what</p><p>Article counts cannot distinguish a written encyclopedia from a generated one. Any target, report or funding case built on raw counts can be satisfied by a bot without serving a single reader.</p><p>Report <strong>composition</strong> (people, places, institutions), not volume.</p></div></div>
+<div class="finding"><div><h3>2. The women's translation backlog is nearly gone</h3><p>Of 3,340 Ugandan women in Wikidata, 1,112 have an English article and <strong>1,066 have a Luganda one</strong>. The English-to-Luganda backlog is <strong>65 people</strong>.</p><p>In football and academia there is <strong>nothing left to translate</strong>; Luganda carries 44 women footballers to English's 38. Nineteen Ugandan women have a Luganda article and no English one. These are not stubs: median length 4,410 bytes, only 12% under 2&nbsp;KB.</p></div><div class="so-what"><p class="k">So what</p><p>Another "translate women's biographies into Luganda" campaign would spend volunteer goodwill on a solved problem.</p><p>The gap moved: <strong>2,168 Ugandan women have no article in any language</strong>. The work is now writing from sources, not translating.</p></div></div>
+<div class="finding"><div><h3>3. Luganda has people but not places</h3><p>Luganda's Uganda content splits <strong>2,634 people</strong> against <strong>404 places</strong>. English splits 3,188 to 791; Swahili runs the other way at 638 to 3,039.</p><p>All four of Uganda's Regions (Central, Eastern, Northern, Western) have no Luganda article. Neither do the Rwenzori Mountains, Mount Elgon, Lake Kyoga or the Nile, the last of which draws over 400,000 English readings every six months.</p></div><div class="so-what"><p class="k">So what</p><p>The gap in Luganda is not a general shortage. It is a specific, nameable shortage of <strong>geography and institutions</strong>, in the language spoken where that geography is.</p><p>This is a well-defined campaign with a finishable target list.</p></div></div>
+<div class="finding"><div><h3>4. Uganda is over-described as data, under-described as encyclopedia</h3><p>Wikidata holds <strong>68,587</strong> items whose country is Uganda. <strong>58,240 of them (85%) have no article in any language.</strong> They are bulk-imported registries: roughly 15,000 primary schools, 24,000 settlements, 4,800 parishes.</p><p>Meanwhile Luganda is still Uganda's only live Wikipedia, though not for much longer. <strong>Runyankore is approved and awaiting creation</strong>; <strong>Acholi is in Incubator with a request pending</strong>; eight further languages have no project at all.</p></div><div class="so-what"><p class="k">So what</p><p>Part of Uganda's deepest gap is not fixable by editing: <strong>data without prose</strong>, and <strong>languages without a project</strong>.</p><p>But the language work is no longer purely advocacy. Two projects are already in flight and need <strong>content, now</strong>. That is work this analysis can supply directly.</p></div></div>
 <h2>Where the writing work is</h2>
-<p class="h2sub">Ugandan women with no article in any language, by field. This is
-the single largest actionable backlog the analysis found, and it is what
-campaign targeting should follow.</p>
-
-<div class="card">
-  <div class="bars">
-    <div class="bar-row"><div class="bar-label">Other sport</div>
-      <div class="bar-track"><div class="bar-fill" style="width:100%"></div></div>
-      <div class="bar-val">711</div></div>
-    <div class="bar-row"><div class="bar-label">Other / unspecified</div>
-      <div class="bar-track"><div class="bar-fill" style="width:68.6%"></div></div>
-      <div class="bar-val">488</div></div>
-    <div class="bar-row"><div class="bar-label">Politics &amp; government</div>
-      <div class="bar-track"><div class="bar-fill" style="width:36.1%"></div></div>
-      <div class="bar-val">257</div></div>
-    <div class="bar-row"><div class="bar-label">Football</div>
-      <div class="bar-track"><div class="bar-fill" style="width:24.1%"></div></div>
-      <div class="bar-val">171</div></div>
-    <div class="bar-row"><div class="bar-label">Academia &amp; education</div>
-      <div class="bar-track"><div class="bar-fill" style="width:23.3%"></div></div>
-      <div class="bar-val">166</div></div>
-    <div class="bar-row"><div class="bar-label">Media &amp; writing</div>
-      <div class="bar-track"><div class="bar-fill" style="width:20.4%"></div></div>
-      <div class="bar-val">145</div></div>
-    <div class="bar-row"><div class="bar-label">Arts &amp; entertainment</div>
-      <div class="bar-track"><div class="bar-fill" style="width:12.0%"></div></div>
-      <div class="bar-val">85</div></div>
-    <div class="bar-row"><div class="bar-label">Activism &amp; social work</div>
-      <div class="bar-track"><div class="bar-fill" style="width:11.7%"></div></div>
-      <div class="bar-val">83</div></div>
-    <div class="bar-row"><div class="bar-label">Business &amp; finance</div>
-      <div class="bar-track"><div class="bar-fill" style="width:4.4%"></div></div>
-      <div class="bar-val">31</div></div>
-    <div class="bar-row"><div class="bar-label">Law</div>
-      <div class="bar-track"><div class="bar-fill" style="width:2.7%"></div></div>
-      <div class="bar-val">19</div></div>
-    <div class="bar-row"><div class="bar-label">Health</div>
-      <div class="bar-track"><div class="bar-fill" style="width:1.7%"></div></div>
-      <div class="bar-val">12</div></div>
-  </div>
-</div>
-
+<p class="h2sub">Ugandan women with no article in any language, by field. This is the single largest actionable backlog the analysis found, and it is what campaign targeting should follow.</p>
+<div class="card"><div class="bars"><div class="bar-row"><div class="bar-label">Other sport</div><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><div class="bar-val">711</div></div><div class="bar-row"><div class="bar-label">Other / unspecified</div><div class="bar-track"><div class="bar-fill" style="width:68.6%"></div></div><div class="bar-val">488</div></div><div class="bar-row"><div class="bar-label">Politics &amp; government</div><div class="bar-track"><div class="bar-fill" style="width:36.1%"></div></div><div class="bar-val">257</div></div><div class="bar-row"><div class="bar-label">Football</div><div class="bar-track"><div class="bar-fill" style="width:24.1%"></div></div><div class="bar-val">171</div></div><div class="bar-row"><div class="bar-label">Academia &amp; education</div><div class="bar-track"><div class="bar-fill" style="width:23.3%"></div></div><div class="bar-val">166</div></div><div class="bar-row"><div class="bar-label">Media &amp; writing</div><div class="bar-track"><div class="bar-fill" style="width:20.4%"></div></div><div class="bar-val">145</div></div><div class="bar-row"><div class="bar-label">Arts &amp; entertainment</div><div class="bar-track"><div class="bar-fill" style="width:12.0%"></div></div><div class="bar-val">85</div></div><div class="bar-row"><div class="bar-label">Activism &amp; social work</div><div class="bar-track"><div class="bar-fill" style="width:11.7%"></div></div><div class="bar-val">83</div></div><div class="bar-row"><div class="bar-label">Business &amp; finance</div><div class="bar-track"><div class="bar-fill" style="width:4.4%"></div></div><div class="bar-val">31</div></div><div class="bar-row"><div class="bar-label">Law</div><div class="bar-track"><div class="bar-fill" style="width:2.7%"></div></div><div class="bar-val">19</div></div><div class="bar-row"><div class="bar-label">Health</div><div class="bar-track"><div class="bar-fill" style="width:1.7%"></div></div><div class="bar-val">12</div></div></div></div>
 <h2>Recommendations</h2>
-<p class="h2sub">Ordered by priority. Each names the file that contains the
-actual list, so none of this requires re-deriving the analysis.</p>
-
-<div class="rec">
-  <div class="rec-head"><span class="pri p1">P1</span>
-    <h3>Clear the women's translation backlog in one session</h3></div>
-  <p>It is 65 people. That is finishable in a single editathon, and it converts
-  a long-running programme into a completed one you can report as closed.</p>
-  <p>Start with the most-read: <strong>Sheila Atim</strong> (95,196 readings in
-  six months), <strong>Salma Lakhani</strong> (20,463), <strong>Judith Ayaa</strong>,
-  <strong>Neema Iyer</strong>. Law is the one field where English is meaningfully
-  ahead: 25 articles to Luganda's 17.</p>
-  <div class="meta">
-    <div><span class="k">List</span><span class="v"><code>ug_women_translate_to_lg.csv</code></span></div>
-    <div><span class="k">Effort</span><span class="v">One editathon, ~10 editors</span></div>
-    <div><span class="k">Done when</span><span class="v">65 &rarr; 0</span></div>
-  </div>
-</div>
-
-<div class="rec">
-  <div class="rec-head"><span class="pri p1">P1</span>
-    <h3>Move women's programming from translating to writing</h3></div>
-  <p>2,168 Ugandan women have no article in any language. Rank by how much
-  Wikidata already records about each one:  the better documented she is,
-  the easier she is to source. Suggested first cohorts, chosen because they are
-  both well-documented and concentrated:</p>
-  <ul>
-    <li><strong>Politics &amp; government</strong> (257): Katushabe Ruth,
-      Ntale Nsereko Madina, Priscilla Nyadoi</li>
-    <li><strong>Academia &amp; education</strong> (166):  Sylvia Angubua Baluka
-      (microbiologist), Harriet Mpairwe, Annabella Habinka Basaza Ejiri</li>
-    <li><strong>Football</strong> (171): Margret Kunihira, Phiona Nabbumba,
-      Majidah Nantanda</li>
-    <li><strong>Other sport</strong> (711): a large, sourceable cluster of
-      badminton and basketball players</li>
-  </ul>
-  <p>Note this is harder work than translation: it needs sources, not just
-  language skills. Plan for librarian or journalist partnerships accordingly.</p>
-  <div class="meta">
-    <div><span class="k">Lists</span><span class="v"><code>ug_women_create_from_scratch.csv</code>, plus one per field</span></div>
-    <div><span class="k">Effort</span><span class="v">Recurring; sourcing-led</span></div>
-    <div><span class="k">Done when</span><span class="v">Monthly fall in the no-article count</span></div>
-  </div>
-</div>
-
-<div class="rec">
-  <div class="rec-head"><span class="pri p2">P2</span>
-    <h3>Run a "Places of Uganda" campaign in Luganda</h3></div>
-  <p>Luganda has 2,634 articles about people and 404 about places. The country
-  itself is missing from its own language.</p>
-  <p>High-demand targets already ranked: <strong>the Nile</strong> (401,934
-  readings), <strong>African Great Lakes</strong> (73,527), <strong>White
-  Nile</strong> (49,323), <strong>Rwenzori Mountains</strong> (28,596),
-  <strong>Mount Elgon</strong>, <strong>Lake Kyoga</strong>, <strong>Kibale
-  National Park</strong>. Then the four Regions, none of which has a Luganda
-  article.</p>
-  <div class="meta">
-    <div><span class="k">List</span><span class="v"><code>ug_missing_lg.csv</code>, filter on place types</span></div>
-    <div><span class="k">Effort</span><span class="v">One quarter, geography-themed</span></div>
-    <div><span class="k">Done when</span><span class="v">Luganda place count 404 to 600+</span></div>
-  </div>
-</div>
-
-<div class="rec">
-  <div class="rec-head"><span class="pri p2">P2</span>
-    <h3>Report composition, and make it the metric everyone quotes</h3></div>
-  <p>Replace "how many Uganda articles does X have" with "how many are about
-  people, places, institutions". Publish the dashboard each month so the User
-  Group, the Foundation and partners are all reading the same number.</p>
-  <p>This is the cheapest recommendation here and it protects every other one:
-  it makes bot-inflated progress visible instead of flattering.</p>
-  <div class="meta">
-    <div><span class="k">Source</span><span class="v"><code>ug_edition_composition.csv</code></span></div>
-    <div><span class="k">Effort</span><span class="v">20 min/month to re-run</span></div>
-    <div><span class="k">Done when</span><span class="v">Used in the next grant report</span></div>
-  </div>
-</div>
-
-<div class="rec">
-  <div class="rec-head"><span class="pri p1">P1</span>
-    <h3>Get Runyankore Wikipedia a day-one content plan before it launches</h3></div>
-  <p><a href="https://incubator.wikimedia.org/wiki/Wp/nyn" target="_blank"
-  rel="noopener">Runyankore</a> is <strong>already approved by the Language
-  Committee and waiting on developers to create it</strong> (task T429189). It
-  does not need advocacy. It needs content, and it needs it ready for the day
-  the wiki appears.</p>
-  <p>A new Wikipedia's first few hundred articles decide whether it reads as a
-  real encyclopedia or an empty shell. A 255-topic starter list is already
-  generated: 150 Uganda-wide essentials plus 105 topics from the Ankole
-  sub-region where the language is actually spoken (Mbarara City,
-  Mbarara University of Science and Technology, Ntungamo, Ntare School, Lake
-  Mburo, Bushenyi).</p>
-  <p>That Ankole half matters most. It is the content <em>no other edition has
-  any reason to write</em>, and it is what makes a Runyankore Wikipedia worth
-  reading rather than a thinner copy of English.</p>
-  <div class="meta">
-    <div><span class="k">List</span><span class="v"><code>ug_starter_nyn.csv</code></span></div>
-    <div><span class="k">Effort</span><span class="v">Pre-launch sprint; time-boxed by the developer queue</span></div>
-    <div><span class="k">Done when</span><span class="v">Wiki launches with 250+ articles, not 5</span></div>
-  </div>
-</div>
-
-<div class="rec">
-  <div class="rec-head"><span class="pri p2">P2</span>
-    <h3>Build Acholi's case for approval with measured content</h3></div>
-  <p><a href="https://incubator.wikimedia.org/wiki/Wp/ach" target="_blank"
-  rel="noopener">Acholi</a> is an eligible test wiki with a request pending on
-  Meta-Wiki. Approval turns on demonstrable content and an active community, so
-  the useful contribution is volume in the right places.</p>
-  <p>A 223-topic starter list is ready: 150 essentials plus 73 from the Acholi
-  sub-region (Gulu City, Gulu University, Kitgum, St. Mary's Hospital
-  Lacor, Atiak, the Pager River).</p>
-  <div class="meta">
-    <div><span class="k">List</span><span class="v"><code>ug_starter_ach.csv</code></span></div>
-    <div><span class="k">Effort</span><span class="v">Sustained; approval-driven</span></div>
-    <div><span class="k">Done when</span><span class="v">Request approved by the Language Committee</span></div>
-  </div>
-</div>
-
-<div class="rec">
-  <div class="rec-head"><span class="pri p3">P3</span>
-    <h3>Open an advocacy track for the eight languages with no project</h3></div>
-  <p>Rukiga, Lusoga, Lango, Ateso, Masaaba, Runyoro-Rutooro, Lugbara and Alur
-  have no test project at all. No editing campaign can reach them; this needs
-  Incubator test wikis, Language Committee engagement and university or
-  cultural-institution partners.</p>
-  <p>Runyankore and Acholi are the proof that the path works, and the template
-  for how to walk it again.</p>
-  <div class="meta">
-    <div><span class="k">Scope</span><span class="v">8 languages with no test project</span></div>
-    <div><span class="k">Effort</span><span class="v">Multi-year, partnership-led</span></div>
-    <div><span class="k">Done when</span><span class="v">A third Ugandan language enters Incubator</span></div>
-  </div>
-</div>
-
-<div class="rec">
-  <div class="rec-head"><span class="pri p3">P3</span>
-    <h3>Run a Wikidata quality drive alongside the writing</h3></div>
-  <p>The analysis inherits Wikidata's errors:  it surfaced an American
-  actress recorded as a Ugandan citizen, and a Harry Potter school filed as a
-  Ugandan administrative unit. Cleanup improves the encyclopedia and sharpens
-  every future measurement at the same time.</p>
-  <p>The 58,240 article-less school and village records are not waste: they are
-  a foundation for later articles and for reuse outside Wikipedia. They just
-  should never be counted as coverage.</p>
-  <div class="meta">
-    <div><span class="k">Source</span><span class="v"><code>ug_wikidata_only_by_type.csv</code></span></div>
-    <div><span class="k">Effort</span><span class="v">Ongoing, pairs with editathons</span></div>
-    <div><span class="k">Done when</span><span class="v">Fewer false positives each cycle</span></div>
-  </div>
-</div>
-
-<div class="rec dont">
-  <div class="rec-head"><span class="pri p1">DON'T</span>
-    <h3>Do not bulk-generate stub articles to raise the count</h3></div>
-  <p>It is tempting: Uganda has 58,240 ready-made Wikidata records, and a bot
-  could turn them into Luganda articles overnight. Article counts would jump and
-  Luganda would leap up every ranking.</p>
-  <p><strong>Cebuano is the proof of what that produces.</strong> The
-  largest Uganda encyclopedia in the world, and a reader looking for a Ugandan
-  person finds two. It would also wreck the one thing Luganda currently does
-  better than English: a genuinely written, human encyclopedia with a 12%
-  stub rate on its women's biographies.</p>
-</div>
-
+<p class="h2sub">Ordered by priority. Each names the file that contains the actual list, so none of this requires re-deriving the analysis.</p>
+<div class="rec"><div class="rec-head"><span class="pri p1">P1</span><h3>Clear the women's translation backlog in one session</h3></div><p>It is 65 people. That is finishable in a single editathon, and it converts a long-running programme into a completed one you can report as closed.</p><p>Start with the most-read: <strong>Sheila Atim</strong> (95,196 readings in six months), <strong>Salma Lakhani</strong> (20,463), <strong>Judith Ayaa</strong>, <strong>Neema Iyer</strong>. Law is the one field where English is meaningfully ahead: 25 articles to Luganda's 17.</p><div class="meta"><div><span class="k">List</span><span class="v"><code>ug_women_translate_to_lg.csv</code></span></div><div><span class="k">Effort</span><span class="v">One editathon, ~10 editors</span></div><div><span class="k">Done when</span><span class="v">65 &rarr; 0</span></div></div></div>
+<div class="rec"><div class="rec-head"><span class="pri p1">P1</span><h3>Move women's programming from translating to writing</h3></div><p>2,168 Ugandan women have no article in any language. Rank by how much Wikidata already records about each one: the better documented she is, the easier she is to source. Suggested first cohorts, chosen because they are both well-documented and concentrated:<ul><li><strong>Politics &amp; government</strong> (257): Katushabe Ruth, Ntale Nsereko Madina, Priscilla Nyadoi</li><li><strong>Academia &amp; education</strong> (166): Sylvia Angubua Baluka (microbiologist), Harriet Mpairwe, Annabella Habinka Basaza Ejiri</li><li><strong>Football</strong> (171): Margret Kunihira, Phiona Nabbumba, Majidah Nantanda</li><li><strong>Other sport</strong> (711): a large, sourceable cluster of badminton and basketball players</li></ul></p><p>Note this is harder work than translation: it needs sources, not just language skills. Plan for librarian or journalist partnerships accordingly.</p><div class="meta"><div><span class="k">Lists</span><span class="v"><code>ug_women_create_from_scratch.csv</code>, plus one per field</span></div><div><span class="k">Effort</span><span class="v">Recurring; sourcing-led</span></div><div><span class="k">Done when</span><span class="v">Monthly fall in the no-article count</span></div></div></div>
+<div class="rec"><div class="rec-head"><span class="pri p2">P2</span><h3>Run a "Places of Uganda" campaign in Luganda</h3></div><p>Luganda has 2,634 articles about people and 404 about places. The country itself is missing from its own language.</p><p>High-demand targets already ranked: <strong>the Nile</strong> (401,934 readings), <strong>African Great Lakes</strong> (73,527), <strong>White Nile</strong> (49,323), <strong>Rwenzori Mountains</strong> (28,596), <strong>Mount Elgon</strong>, <strong>Lake Kyoga</strong>, <strong>Kibale National Park</strong>. Then the four Regions, none of which has a Luganda article.</p><div class="meta"><div><span class="k">List</span><span class="v"><code>ug_missing_lg.csv</code>, filter on place types</span></div><div><span class="k">Effort</span><span class="v">One quarter, geography-themed</span></div><div><span class="k">Done when</span><span class="v">Luganda place count 404 to 600+</span></div></div></div>
+<div class="rec"><div class="rec-head"><span class="pri p2">P2</span><h3>Report composition, and make it the metric everyone quotes</h3></div><p>Replace "how many Uganda articles does X have" with "how many are about people, places, institutions". Publish the dashboard each month so the User Group, the Foundation and partners are all reading the same number.</p><p>This is the cheapest recommendation here and it protects every other one: it makes bot-inflated progress visible instead of flattering.</p><div class="meta"><div><span class="k">Source</span><span class="v"><code>ug_edition_composition.csv</code></span></div><div><span class="k">Effort</span><span class="v">20 min/month to re-run</span></div><div><span class="k">Done when</span><span class="v">Used in the next grant report</span></div></div></div>
+<div class="rec"><div class="rec-head"><span class="pri p1">P1</span><h3>Get Runyankore Wikipedia a day-one content plan before it launches</h3></div><p><a href="https://incubator.wikimedia.org/wiki/Wp/nyn" target="_blank" rel="noopener">Runyankore</a> is <strong>already approved by the Language Committee and waiting on developers to create it</strong> (task T429189). It does not need advocacy. It needs content, and it needs it ready for the day the wiki appears.</p><p>A new Wikipedia's first few hundred articles decide whether it reads as a real encyclopedia or an empty shell. A 255-topic starter list is already generated: 150 Uganda-wide essentials plus 105 topics from the Ankole sub-region where the language is actually spoken (Mbarara City, Mbarara University of Science and Technology, Ntungamo, Ntare School, Lake Mburo, Bushenyi).</p><p>That Ankole half matters most. It is the content <em>no other edition has any reason to write</em>, and it is what makes a Runyankore Wikipedia worth reading rather than a thinner copy of English.</p><div class="meta"><div><span class="k">List</span><span class="v"><code>ug_starter_nyn.csv</code></span></div><div><span class="k">Effort</span><span class="v">Pre-launch sprint; time-boxed by the developer queue</span></div><div><span class="k">Done when</span><span class="v">Wiki launches with 250+ articles, not 5</span></div></div></div>
+<div class="rec"><div class="rec-head"><span class="pri p2">P2</span><h3>Build Acholi's case for approval with measured content</h3></div><p><a href="https://incubator.wikimedia.org/wiki/Wp/ach" target="_blank" rel="noopener">Acholi</a> is an eligible test wiki with a request pending on Meta-Wiki. Approval turns on demonstrable content and an active community, so the useful contribution is volume in the right places.</p><p>A 223-topic starter list is ready: 150 essentials plus 73 from the Acholi sub-region (Gulu City, Gulu University, Kitgum, St. Mary's Hospital Lacor, Atiak, the Pager River).</p><div class="meta"><div><span class="k">List</span><span class="v"><code>ug_starter_ach.csv</code></span></div><div><span class="k">Effort</span><span class="v">Sustained; approval-driven</span></div><div><span class="k">Done when</span><span class="v">Request approved by the Language Committee</span></div></div></div>
+<div class="rec"><div class="rec-head"><span class="pri p3">P3</span><h3>Open an advocacy track for the eight languages with no project</h3></div><p>Rukiga, Lusoga, Lango, Ateso, Masaaba, Runyoro-Rutooro, Lugbara and Alur have no test project at all. No editing campaign can reach them; this needs Incubator test wikis, Language Committee engagement and university or cultural-institution partners.</p><p>Runyankore and Acholi are the proof that the path works, and the template for how to walk it again.</p><div class="meta"><div><span class="k">Scope</span><span class="v">8 languages with no test project</span></div><div><span class="k">Effort</span><span class="v">Multi-year, partnership-led</span></div><div><span class="k">Done when</span><span class="v">A third Ugandan language enters Incubator</span></div></div></div>
+<div class="rec"><div class="rec-head"><span class="pri p3">P3</span><h3>Run a Wikidata quality drive alongside the writing</h3></div><p>The analysis inherits Wikidata's errors: it surfaced an American actress recorded as a Ugandan citizen, and a Harry Potter school filed as a Ugandan administrative unit. Cleanup improves the encyclopedia and sharpens every future measurement at the same time.</p><p>The 58,240 article-less school and village records are not waste: they are a foundation for later articles and for reuse outside Wikipedia. They just should never be counted as coverage.</p><div class="meta"><div><span class="k">Source</span><span class="v"><code>ug_wikidata_only_by_type.csv</code></span></div><div><span class="k">Effort</span><span class="v">Ongoing, pairs with editathons</span></div><div><span class="k">Done when</span><span class="v">Fewer false positives each cycle</span></div></div></div>
+<div class="rec dont"><div class="rec-head"><span class="pri p1">DON&#x27;T</span><h3>Do not bulk-generate stub articles to raise the count</h3></div><p>It is tempting: Uganda has 58,240 ready-made Wikidata records, and a bot could turn them into Luganda articles overnight. Article counts would jump and Luganda would leap up every ranking.</p><p><strong>Cebuano is the proof of what that produces.</strong> The largest Uganda encyclopedia in the world, and a reader looking for a Ugandan person finds two. It would also wreck the one thing Luganda currently does better than English: a genuinely written, human encyclopedia with a 12% stub rate on its women's biographies.</p></div>
 <h2>First 90 days</h2>
-<p class="h2sub">A sequence that produces a measurable delta by the end of the
-quarter, and one completed programme to report.</p>
-
-<ol class="plan">
-  <li>
-    <p class="when">Weeks 1-2</p>
-    <h3>Publish the baseline and agree the metric</h3>
-    <p>Circulate the dashboard. Get the User Group to adopt composition rather
-    than article count as the reported measure, before any campaign starts and
-    can be judged by the old one.</p>
-  </li>
-  <li>
-    <p class="when">Weeks 3-4</p>
-    <h3>Translation sprint: clear all 65</h3>
-    <p>One editathon, one finishable list. Fast visible win, and it retires the
-    translation programme cleanly rather than letting it drift.</p>
-  </li>
-  <li>
-    <p class="when">Weeks 5-8</p>
-    <h3>First creation cohort: women in politics and academia</h3>
-    <p>423 candidates between the two fields, the best-documented first. Pair
-    with a library or newsroom for sourcing, since this is the step where
-    translation skills alone are not enough.</p>
-  </li>
-  <li>
-    <p class="when">Weeks 9-12</p>
-    <h3>Places of Uganda, then re-measure</h3>
-    <p>Geography sprint on the ranked list, starting with the Nile and the four
-    Regions. Then re-run the pipeline and publish the delta against this
-    baseline:  that comparison is the grant report.</p>
-  </li>
-  <li>
-    <p class="when">In parallel, throughout</p>
-    <h3>Runyankore pre-launch sprint</h3>
-    <p>This one is not sequenced by us: it is sequenced by the developer
-    queue, and the wiki could be created at any point. Run the 255-topic starter
-    list as a standing workstream with Ankole-region contributors so that
-    whenever creation lands, the wiki opens with an encyclopedia rather than a
-    main page.</p>
-  </li>
-</ol>
-
+<p class="h2sub">A sequence that produces a measurable delta by the end of the quarter, and one completed programme to report.</p>
+<ol class="plan"><li><p class="when">Weeks 1-2</p><h3>Publish the baseline and agree the metric</h3><p>Circulate the dashboard. Get the User Group to adopt composition rather than article count as the reported measure, before any campaign starts and can be judged by the old one.</p></li><li><p class="when">Weeks 3-4</p><h3>Translation sprint: clear all 65</h3><p>One editathon, one finishable list. Fast visible win, and it retires the translation programme cleanly rather than letting it drift.</p></li><li><p class="when">Weeks 5-8</p><h3>First creation cohort: women in politics and academia</h3><p>423 candidates between the two fields, the best-documented first. Pair with a library or newsroom for sourcing, since this is the step where translation skills alone are not enough.</p></li><li><p class="when">Weeks 9-12</p><h3>Places of Uganda, then re-measure</h3><p>Geography sprint on the ranked list, starting with the Nile and the four Regions. Then re-run the pipeline and publish the delta against this baseline: that comparison is the grant report.</p></li><li><p class="when">In parallel, throughout</p><h3>Runyankore pre-launch sprint</h3><p>This one is not sequenced by us: it is sequenced by the developer queue, and the wiki could be created at any point. Run the 255-topic starter list as a standing workstream with Ankole-region contributors so that whenever creation lands, the wiki opens with an encyclopedia rather than a main page.</p></li></ol>
 <h2>Baseline to measure against</h2>
-<p class="h2sub">Re-running the pipeline next month regenerates every one of
-these. Progress is the difference.</p>
-
-<div class="card scroller">
-<table>
-  <thead><tr><th>Indicator</th><th class="num">Sep 2026</th><th>Where it comes from</th></tr></thead>
-  <tbody>
-    <tr><td>Uganda topics in Luganda</td><td class="num">3,592</td><td><code>ug_coverage_by_language.csv</code></td></tr>
-    <tr><td>Luganda articles about places</td><td class="num">404</td><td><code>ug_edition_composition.csv</code></td></tr>
-    <tr><td>Uganda's four Regions in Luganda</td><td class="num">0 of 4</td><td><code>ug_admin_units_coverage.csv</code></td></tr>
-    <tr><td>Luganda Uganda-article stub rate</td><td class="num">24%</td><td><code>ug_incomplete_lg.csv</code></td></tr>
-    <tr><td>Women to translate into Luganda</td><td class="num">65</td><td><code>ug_women_by_field.csv</code></td></tr>
-    <tr><td>Women with no article anywhere</td><td class="num">2,168</td><td><code>ug_women_by_field.csv</code></td></tr>
-    <tr><td>Women's biographies in Luganda</td><td class="num">1,066</td><td><code>ug_women_by_field.csv</code></td></tr>
-    <tr><td>Topics missing from Luganda</td><td class="num">8,225</td><td><code>ug_missing_lg.csv</code></td></tr>
-    <tr><td>Runyankore starter list ready</td><td class="num">255</td><td><code>ug_starter_nyn.csv</code></td></tr>
-    <tr><td>Acholi starter list ready</td><td class="num">223</td><td><code>ug_starter_ach.csv</code></td></tr>
-    <tr><td>Ugandan languages with no test project</td><td class="num">8</td><td><code>ug_incubator_targets.csv</code></td></tr>
-  </tbody>
-</table>
-</div>
-
+<p class="h2sub">Re-running the pipeline next month regenerates every one of these. Progress is the difference.</p>
+<div class="card scroller"><table><thead><tr><th>Indicator</th><th class="num">Sep 2026</th><th>Where it comes from</th></tr></thead><tbody><tr><td>Uganda topics in Luganda</td><td class="num">3,592</td><td><code>ug_coverage_by_language.csv</code></td></tr><tr><td>Luganda articles about places</td><td class="num">404</td><td><code>ug_edition_composition.csv</code></td></tr><tr><td>Uganda&#x27;s four Regions in Luganda</td><td class="num">0 of 4</td><td><code>ug_admin_units_coverage.csv</code></td></tr><tr><td>Luganda Uganda-article stub rate</td><td class="num">24%</td><td><code>ug_incomplete_lg.csv</code></td></tr><tr><td>Women to translate into Luganda</td><td class="num">65</td><td><code>ug_women_by_field.csv</code></td></tr><tr><td>Women with no article anywhere</td><td class="num">2,168</td><td><code>ug_women_by_field.csv</code></td></tr><tr><td>Women&#x27;s biographies in Luganda</td><td class="num">1,066</td><td><code>ug_women_by_field.csv</code></td></tr><tr><td>Topics missing from Luganda</td><td class="num">8,225</td><td><code>ug_missing_lg.csv</code></td></tr><tr><td>Runyankore starter list ready</td><td class="num">255</td><td><code>ug_starter_nyn.csv</code></td></tr><tr><td>Acholi starter list ready</td><td class="num">223</td><td><code>ug_starter_ach.csv</code></td></tr><tr><td>Ugandan languages with no test project</td><td class="num">8</td><td><code>ug_incubator_targets.csv</code></td></tr></tbody></table></div>
 <h2>What this analysis cannot tell you</h2>
-<p class="h2sub">Stating the limits is part of the job. Every one of these is a
-real constraint on how far the recommendations above can be pushed.</p>
-
-<div class="card">
-<ul class="limits">
-  <li><strong>Recall is a floor, not a true count.</strong> The Wikipedia
-  Diversity Observatory uses a machine-learning classifier trained on
-  hand-labelled data to catch culturally Ugandan topics with no formal Wikidata
-  link to Uganda. This pipeline uses seven explicit rules instead, so the real
-  corpus is somewhat larger than 14,149.</li>
-  <li><strong>It measures content, not people.</strong> Nothing here explains
-  <em>why</em> gaps exist, who is editing, or whether new editors stay. Luganda's
-  73 active editors are the binding constraint on every recommendation, and this
-  analysis has nothing to say about growing that number.</li>
-  <li><strong>Data quality is inherited.</strong> Wrong citizenship records and
-  odd classifications flow straight through from Wikidata into the worklists.
-  Expect to discard some rows by hand.</li>
-  <li><strong>The bot/human distinction is a judgement per edition</strong>,
-  inferred from composition and stub rates: strong evidence, not a
-  per-article test.</li>
-  <li><strong>Reader demand is English-shaped.</strong> Priority ranking uses
-  English Wikipedia pageviews because Luganda's traffic is too small to rank on.
-  What English readers want is a proxy for what Luganda readers want, and an
-  imperfect one.</li>
-  <li><strong>The campaign attribution is inferred.</strong> Luganda's parity on
-  women's biographies looks like organised effort, but this measures the outcome
-  and not the cause. Confirm with the people who ran it.</li>
-  <li><strong>Incubator content is invisible to this analysis.</strong> Test
-  wikis live at <code>incubator.wikimedia.org/wiki/Wp/&lt;code&gt;</code> and are
-  not Wikidata sitelinks, so whatever Runyankore and Acholi have already written
-  cannot be measured here. Their starter lists are <em>proposals</em>, not gap
-  measurements: check them against the test wikis before assigning work,
-  or some of it will already be done.</li>
-</ul>
-</div>
-
+<p class="h2sub">Stating the limits is part of the job. Every one of these is a real constraint on how far the recommendations above can be pushed.</p>
+<div class="card"><ul class="limits"><li><strong>Recall is a floor, not a true count.</strong> The Wikipedia Diversity Observatory uses a machine-learning classifier trained on hand-labelled data to catch culturally Ugandan topics with no formal Wikidata link to Uganda. This pipeline uses seven explicit rules instead, so the real corpus is somewhat larger than 14,149.</li><li><strong>It measures content, not people.</strong> Nothing here explains <em>why</em> gaps exist, who is editing, or whether new editors stay. Luganda's 73 active editors are the binding constraint on every recommendation, and this analysis has nothing to say about growing that number.</li><li><strong>Data quality is inherited.</strong> Wrong citizenship records and odd classifications flow straight through from Wikidata into the worklists. Expect to discard some rows by hand.</li><li><strong>The bot/human distinction is a judgement per edition</strong>, inferred from composition and stub rates: strong evidence, not a per-article test.</li><li><strong>Reader demand is English-shaped.</strong> Priority ranking uses English Wikipedia pageviews because Luganda's traffic is too small to rank on. What English readers want is a proxy for what Luganda readers want, and an imperfect one.</li><li><strong>The campaign attribution is inferred.</strong> Luganda's parity on women's biographies looks like organised effort, but this measures the outcome and not the cause. Confirm with the people who ran it.</li><li><strong>Incubator content is invisible to this analysis.</strong> Test wikis live at <code>incubator.wikimedia.org/wiki/Wp/&lt;code&gt;</code> and are not Wikidata sitelinks, so whatever Runyankore and Acholi have already written cannot be measured here. Their starter lists are <em>proposals</em>, not gap measurements: check them against the test wikis before assigning work, or some of it will already be done.</li></ul></div>
 <footer>
-  <p><strong>Method.</strong> Uganda's content corpus is Wikidata items about
-  Uganda holding at least one Wikipedia sitelink, gathered by seven retrieval
-  strategies over the Wikidata Query Service, with article sizes from the
-  MediaWiki API and pageviews from the Wikimedia REST API. Worklists are gated
-  on a structural link to Uganda rather than a keyword match. Modelled on the
-  <a href="https://meta.wikimedia.org/wiki/Wikipedia_Diversity_Observatory"
-  target="_blank" rel="noopener">Wikipedia Diversity Observatory</a> by Marc
-  Miquel and David Laniado, rebuilt to run without Wikimedia Cloud access.</p>
-  <p><strong>Everything is reproducible.</strong> <code>python
-  src_data/run_all.py</code> rebuilds all 24 datasets; <code>python
-  src_viz/build_dashboard.py</code> rebuilds the dashboard. Stages checkpoint per
-  calendar month. Source data from Wikidata (CC0) and Wikipedia (CC BY-SA).</p>
+<p><strong>Method.</strong> Uganda's content corpus is Wikidata items about Uganda holding at least one Wikipedia sitelink, gathered by seven retrieval strategies over the Wikidata Query Service, with article sizes from the MediaWiki API and pageviews from the Wikimedia REST API. Worklists are gated on a structural link to Uganda rather than a keyword match. Modelled on the <a href="https://meta.wikimedia.org/wiki/Wikipedia_Diversity_Observatory" target="_blank" rel="noopener">Wikipedia Diversity Observatory</a> by Marc Miquel and David Laniado, rebuilt to run without Wikimedia Cloud access.</p>
+<p><strong>Everything is reproducible.</strong> <code>python src_data/run_all.py</code> rebuilds all 24 datasets; <code>python src_viz/export_data.py</code> and <code>python src_viz/build_pages.py</code> rebuild every page. Stages checkpoint per calendar month. Source data from Wikidata (CC0) and Wikipedia (CC BY-SA).</p>
 </footer>
 </div>
+
+<script src="assets/js/app.js" defer></script>

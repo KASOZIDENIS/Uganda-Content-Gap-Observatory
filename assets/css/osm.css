@@ -1,0 +1,42 @@
+/* osm.css: what is specific to uganda_openstreetmap.html.
+   Expects tokens.css, shell.css and components.css to be loaded first. */
+body { line-height: 1.6; }
+.wrap { max-width: 1140px; }
+
+/* class names are short; the coverage table carries seven columns */
+.bar-row { grid-template-columns: 210px 1fr 84px; }
+.plain { max-width: 100%; }
+.plain th { white-space: nowrap; }
+.plain th.num, .plain td.num { padding-left: 20px; }
+.plain td:first-child, .plain th:first-child { min-width: 190px; }
+.spacer { height: 26px; }
+
+table.itemlist { min-width: 820px; }
+
+/* what Wikidata turned out to have, worst first */
+.chip.v-absent { background: color-mix(in srgb, var(--critical) 18%, transparent);
+  color: var(--critical); font-weight: 600; }
+.chip.v-item_no_article { background: color-mix(in srgb, var(--s2) 18%, transparent);
+  color: var(--s2); font-weight: 600; }
+.chip.v-has_article { background: color-mix(in srgb, var(--good) 15%, transparent);
+  color: var(--good); }
+
+/* the bulk-class samples, side by side where there is room */
+.samples { display: grid; grid-template-columns: 1fr; gap: 28px;
+  margin-top: 4px; }
+@media (min-width: 820px) { .samples { grid-template-columns: 1fr 1fr; } }
+.samples h3 { font-size: 15px; margin: 0 0 6px; }
+.samples p { color: var(--text2); margin: 0 0 10px; max-width: 54ch; }
+.samplelist { margin: 0; padding-left: 19px; color: var(--text2);
+  font-size: 13px; columns: 2; column-gap: 26px; }
+.samplelist li { margin-bottom: 3px; break-inside: avoid; }
+@media (max-width: 560px) { .samplelist { columns: 1; } }
+
+/* kept here rather than in components.css: a mobile override there would be
+   beaten by this sheet's own .bar-row and .wrap rules above */
+@media (max-width: 640px) {
+  h1 { font-size: 26px; } .wrap { padding: 36px 16px 72px; }
+  .tile .v { font-size: 25px; }
+  .bar-row { grid-template-columns: 128px 1fr 66px; gap: 8px; }
+  .bar-label { font-size: 12px; }
+}

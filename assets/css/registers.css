@@ -1,0 +1,23 @@
+/* registers.css: what is specific to uganda_official_registers.html.
+   Expects tokens.css, shell.css and components.css to be loaded first. */
+body { line-height: 1.6; }
+.wrap { max-width: 1120px; }
+
+/* register names are short; give the bars their plot area */
+.bar-row { grid-template-columns: 220px 1fr 84px; }
+.plain { max-width: 100%; }
+.plain th { white-space: nowrap; }
+.plain th.num, .plain td.num { padding-left: 22px; }
+.plain td:first-child, .plain th:first-child { min-width: 220px; }
+.spacer { height: 26px; }
+
+table.itemlist { min-width: 880px; }
+
+/* kept here rather than in components.css: a mobile override there would be
+   beaten by this sheet's own .bar-row and .wrap rules above */
+@media (max-width: 640px) {
+  h1 { font-size: 26px; } .wrap { padding: 36px 16px 72px; }
+  .tile .v { font-size: 25px; }
+  .bar-row { grid-template-columns: 136px 1fr 66px; gap: 8px; }
+  .bar-label { font-size: 12px; }
+}

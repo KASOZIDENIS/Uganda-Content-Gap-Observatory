@@ -27,9 +27,9 @@ def get_session():
     return _session
 
 
-def cycle_year_month():
-    """The data cycle this run belongs to, e.g. '2026-09'."""
-    return datetime.date.today().strftime('%Y-%m')
+# Moved to config so the presentation layer can reach it without importing
+# this module, and therefore without requests. Re-exported for the stages.
+cycle_year_month = config.cycle_year_month
 
 
 # ------------------------------------------------------------------ sparql

@@ -1,0 +1,45 @@
+/* undocumented.css: what is specific to uganda_undocumented_women.html.
+   Expects tokens.css, shell.css and components.css to be loaded first. */
+body { line-height: 1.6; }
+.wrap { max-width: 1160px; }
+
+.itemlist { min-width: 1020px; }
+
+/* the small summary tables */
+table.plain { width: 100%; border-collapse: collapse; font-size: 13.5px;
+  max-width: 720px; }
+.plain th, .plain td { text-align: left; padding: 8px 10px;
+  border-bottom: 1px solid var(--border); vertical-align: top; }
+.plain td.num, .plain th.num { text-align: right;
+  font-variant-numeric: tabular-nums; }
+.plain tbody tr:hover { background: var(--wash); }
+.spacer { height: 26px; }
+
+.startlist { margin: 10px 0; padding-left: 19px; }
+.startlist li { margin-bottom: 5px; }
+.startlist strong { color: var(--text); }
+
+/* Wikimedia status. "nothing at all" is the point of the page, so it is the
+   only chip that gets the alarm colour. */
+.chip.st-absent { background: color-mix(in srgb, var(--critical) 18%, transparent);
+  color: var(--critical); font-weight: 600; }
+.chip.st-wikidata_only { background: color-mix(in srgb, var(--s2) 18%, transparent);
+  color: var(--s2); font-weight: 600; }
+.chip.st-possible_match { background: color-mix(in srgb, var(--s1) 14%, transparent);
+  color: var(--s1); }
+.chip.st-documented { background: color-mix(in srgb, var(--good) 15%, transparent);
+  color: var(--good); }
+
+/* seniority of the office */
+.chip.rk-chief { background: color-mix(in srgb, var(--s3) 20%, transparent);
+  color: var(--s3); font-weight: 600; }
+.chip.rk-executive { background: color-mix(in srgb, var(--s3) 12%, transparent);
+  color: var(--s3); }
+.chip.rk-senior { background: var(--wash); color: var(--text2); }
+
+/* kept here rather than in components.css: a mobile override there would be
+   beaten by this sheet's own .wrap rule above */
+@media (max-width: 640px) {
+  h1 { font-size: 26px; } .wrap { padding: 36px 16px 72px; }
+  .tile .v { font-size: 25px; }
+}
