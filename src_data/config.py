@@ -42,6 +42,8 @@ PAGES = [
     ('topics', 'Topic areas', 'uganda_topic_areas.html'),
     ('osm', 'OpenStreetMap', 'uganda_openstreetmap.html'),
     ('registers', 'Official registers', 'uganda_official_registers.html'),
+    ('commons', 'Commons', 'uganda_commons.html'),
+    ('folklore', 'Folklore', 'uganda_folklore.html'),
     ('offices', 'Women in office', 'uganda_women_in_office.html'),
     ('undocumented', 'Undocumented women', 'uganda_undocumented_women.html'),
     ('undocumented_men', 'Undocumented men', 'uganda_undocumented_men.html'),

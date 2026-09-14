@@ -12,7 +12,11 @@ from render import (bars, callout, data_table, esc, eyebrow, filter_controls,
 
 
 def _osm_link(f):
-    url = f'https://www.openstreetmap.org/{f["osmType"]}/{f["osmId"]}'
+    # 'route' is the pipeline's label for a linear feature built from
+    # many ways; osmId is one of them, and OSM serves only node, way
+    # and relation, so /route/ would 404.
+    kind = 'way' if f["osmType"] == 'route' else f["osmType"]
+    url = f'https://www.openstreetmap.org/{kind}/{f["osmId"]}'
     return (f'<a href="{esc(url)}" target="_blank" rel="noopener">'
             f'{esc(f["name"])}</a>')
 

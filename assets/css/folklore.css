@@ -1,0 +1,56 @@
+/* folklore.css: what is specific to uganda_folklore.html.
+   Expects tokens.css, shell.css and components.css to be loaded first. */
+body { line-height: 1.6; }
+.wrap { max-width: 1180px; }
+.spacer { height: 26px; }
+
+.plain { max-width: 100%; }
+.plain th { white-space: nowrap; }
+.plain th.num, .plain td.num { padding-left: 22px; }
+.plain td a { overflow-wrap: anywhere; }
+
+/* Bar labels are family names plus a count, so they need room. */
+.bar-row { grid-template-columns: 230px 1fr 180px; }
+
+/* ---- the grid -------------------------------------------------------- */
+/* 15 aspect columns will not fit a phone, so the table scrolls on its own
+   rather than pushing the page sideways. */
+.matrix-scroll { overflow-x: auto; margin: 18px 0 6px; }
+
+table.matrix { border-collapse: collapse; font-size: 13px; }
+table.matrix th, table.matrix td { border: 1px solid var(--border); }
+
+/* Rotated headers keep the grid narrow enough to read. */
+th.rot {
+  height: 132px; width: 30px; padding: 0; vertical-align: bottom;
+  background: var(--wash);
+}
+th.rot > span {
+  display: block; width: 30px; transform-origin: bottom left;
+  transform: translateX(20px) rotate(-90deg); white-space: nowrap;
+  text-align: left; font-weight: 600; font-size: 12px; padding-bottom: 6px;
+}
+
+th.rowlab {
+  text-align: left; padding: 5px 12px 5px 8px; white-space: nowrap;
+  font-weight: 500; position: sticky; left: 0; background: var(--surface);
+}
+tr.famrow th {
+  text-align: left; padding: 9px 8px; background: var(--wash);
+  font-size: 12px; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--muted);
+}
+
+td.cell { width: 30px; text-align: center; padding: 5px 0; font-variant-numeric: tabular-nums; }
+/* An empty cell is the finding, so it is drawn rather than left blank. */
+td.cell.none { background: var(--wash); }
+td.cell.has { font-weight: 700; color: var(--text); cursor: help; }
+td.total { padding: 5px 10px; font-weight: 600; }
+
+@media (max-width: 640px) {
+  h1 { font-size: 26px; } .wrap { padding: 36px 16px 72px; }
+  .tile .v { font-size: 25px; }
+  .bar-row { grid-template-columns: 120px 1fr 96px; gap: 8px; }
+  .bar-label { font-size: 12px; }
+  table.matrix { font-size: 12px; }
+}

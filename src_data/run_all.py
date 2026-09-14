@@ -13,7 +13,9 @@ import sys
 import time
 
 import article_features
+import commons_audit
 import content_retrieval
+import folklore_matrix
 import incubator_starter
 import office_analysis
 import roster_check
@@ -66,6 +68,24 @@ def main():
         official_registers.main(force)
     except Exception as reason:                        # noqa: BLE001
         print(f'  official registers skipped: '
+              f'{type(reason).__name__}: {reason}')
+
+    # Folklore has no enumerable source list, so this stage builds the
+    # two-axis frame and measures Wikimedia against it.
+    try:
+        folklore_matrix.main(force)
+    except Exception as reason:                        # noqa: BLE001
+        print(f'  folklore matrix skipped: '
+              f'{type(reason).__name__}: {reason}')
+
+    # Commons is a fourth corpus, files rather than articles, and the crawl is
+    # thousands of calls against one API. Like the others it runs last and its
+    # failure does not sink the cycle; it checkpoints per function, so a
+    # re-run resumes rather than starting the walk again.
+    try:
+        commons_audit.main(force)
+    except Exception as reason:                        # noqa: BLE001
+        print(f'  commons audit skipped: '
               f'{type(reason).__name__}: {reason}')
 
     print('\n' + '=' * 70)

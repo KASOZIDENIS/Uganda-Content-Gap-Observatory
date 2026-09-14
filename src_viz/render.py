@@ -141,7 +141,9 @@ def bars(rows):
 def plain_table(columns, rows):
     """The quieter summary tables, as opposed to the big filterable list.
 
-    A cell is a dict: text, plus strong and dim flags.
+    A cell is a dict: text, plus strong and dim flags. A cell may instead carry
+    html, already escaped by the caller, for the one case text cannot cover:
+    a link.
     """
     head = join(f'<th{attr("class", "num" if c.get("num") else None)}>'
                 f'{esc(c["label"])}</th>' for c in columns)
@@ -151,7 +153,7 @@ def plain_table(columns, rows):
         for i, cell in enumerate(cells):
             num = 'num' if i < len(columns) and columns[i].get('num') else ''
             dim = 'dim' if cell.get('dim') else ''
-            text = esc(cell['text'])
+            text = cell['html'] if 'html' in cell else esc(cell['text'])
             if cell.get('strong'):
                 text = f'<strong>{text}</strong>'
             tds.append(f'<td{attr("class", cls(num, dim) or None)}>{text}</td>')

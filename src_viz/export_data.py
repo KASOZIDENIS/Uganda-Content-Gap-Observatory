@@ -33,6 +33,8 @@ import data_undocumented   # noqa: E402
 import data_topics         # noqa: E402
 import data_osm            # noqa: E402
 import data_registers      # noqa: E402
+import data_commons        # noqa: E402
+import data_folklore       # noqa: E402
 
 OUT_DIR = os.path.join(config.PROJECT_PATH, 'data', 'ui')
 
@@ -393,6 +395,45 @@ def registers_view(conn):
     }
 
 
+# -------------------------------------------------------------------- commons
+def commons_view(conn):
+    d = data_commons.load(conn)
+    return {
+        'nav': nav('commons'),
+        'cycle': config.cycle_year_month(),
+        'title': 'Uganda on Wikimedia Commons',
+        'sheet': 'commons.css',
+        'nCategories': d['nCategories'],
+        'nFiles': d['nFiles'],
+        'maxDepth': d['maxDepth'],
+        'truncated': d['truncated'],
+        'depths': d['depths'],
+        'media': d['media'],
+        'themes': d['themes'],
+        'campaigns': d['campaigns'],
+        'fromCampaigns': d['fromCampaigns'],
+        'campaignShare': d['campaignShare'],
+        'photos': d['photos'],
+        'photoShare': d['photoShare'],
+        'top': d['top'],
+        'check': d['check'],
+        'mediaLabels': d['mediaLabels'],
+    }
+
+
+# ------------------------------------------------------------------- folklore
+def folklore_view(conn):
+    d = data_folklore.load(conn)
+    payload = {
+        'nav': nav('folklore'),
+        'cycle': config.cycle_year_month(),
+        'title': 'Folklore of Uganda',
+        'sheet': 'folklore.css',
+    }
+    payload.update(d)
+    return payload
+
+
 # ------------------------------------------------------------------ action plan
 def plan_view(conn):
     """The action plan is a frozen baseline, so it needs no figures exported.
@@ -473,6 +514,8 @@ def edition_view(conn):
 PAGES = {
     'dashboard': dashboard_view.view,
     'registers': registers_view,
+    'commons': commons_view,
+    'folklore': folklore_view,
     'osm': osm_view,
     'undocumented_men': lambda conn: undocumented_view(conn, 'men'),
     'topics': topics_view,

@@ -337,6 +337,96 @@ county and parish that carry no identifying weight, and it is deliberately
 strict: an article filed under another spelling reads as missing, so "no
 article" is a search result worth checking rather than proof of absence.
 
+## The fourth corpus: Wikimedia Commons
+
+Commons is measured in files rather than articles, and it is organised only by
+hand-built categories. A breadth-first walk out from `Category:Uganda` reaches
+**3,738 categories and 49,310 distinct files** within four steps.
+
+**Every total carries the depth that produced it**, because the category graph
+has cycles and multiple parents and does not converge on Uganda. The walk finds
+32 categories at depth 1, 357 at depth 2, 1,299 at depth 3 and 2,049 at depth 4:
+roughly four times as many each level, because Ugandan categories sit under
+continental, chronological and file-format parents that lead back out into the
+rest of Commons. WCUGU's own baseline of 1,936 categories falls between depths 3
+and 4, which is what fixed the limit here at 4. A category or file count quoted
+without a depth is a statement about how far somebody walked, not about Uganda.
+
+What the walk shows:
+
+- **94.9% of the files are photographs.** Against that, 1,861 drawings, 392
+  videos, 198 documents and 53 audio files. The maps, diagrams, audio and video
+  an article needs are the part that is missing, and a file count alone hides it.
+- **12,208 files, roughly a quarter, still sit in a Wiki Loves category**, led by
+  Wiki Loves Folklore (4,503) and Wiki Loves Earth (3,984). Campaign uploads are
+  often recategorised to their subject afterwards and lose the campaign
+  category, so this is a floor.
+- **1,412 files are Our World in Data charts**, which are files about Uganda
+  without being images of it, so they are bucketed separately rather than
+  counted as coverage.
+
+Media type is derived from the file extension rather than from one API call per
+fifty files. That is a heuristic, so `verify_mediatype` samples the value Commons
+itself reports: on 300 random files the extension agreed **300 times**. The rate
+is stored and printed on the page rather than assumed.
+
+Themes are matched on the category title, which is the only text a crawl has.
+That cannot classify a category named for a place or a person, so Kampala and
+the Ruwenzori Range fall to Other no matter how many keywords are added; **25.4%
+of files remain unclassified** and the page says so. Because `theme_of` reads
+nothing but the title, `reclassify` recomputes both tables from stored titles in
+about thirty seconds, so tuning the classifier never means crawling again.
+
+## Folklore, on two axes
+
+Every other stage asks what is missing from a list that can be enumerated.
+Folklore has no such list, so this stage builds the frame and measures Wikimedia
+against it. Communities down one axis under their four language families (Bantu,
+Nilotic/Luo, Ateker, Central Sudanic), UNESCO's domains of intangible cultural
+heritage across the other, plus a tangible branch and the Uganda-specific
+sub-domains the five domains flatten: kingship and titles, clans and totems,
+attire, cuisine, naming systems, traditional governance, games.
+
+31 communities against 15 aspects is 465 cells. **43 of them have an article,
+which is 9%.**
+
+The sharper finding is in the inscriptions. Uganda has three tangible World
+Heritage sites and six elements on UNESCO's intangible heritage lists:
+
+- The three sites carry **141 Wikipedia articles** between them.
+- The six living traditions carry **10**.
+- **Three of the six have no article in any language**: the Lango male-child
+  cleansing ceremony, the Koogere oral tradition and the Ma'di bowl lyre. All
+  three are on the Urgent Safeguarding List, the list an element reaches when
+  UNESCO judges it at risk of disappearing.
+- Barkcloth making, Uganda's oldest inscription and its only entry on the
+  Representative List, has exactly one article, in French. The English article
+  titled Barkcloth is a different Wikidata item about the material as a global
+  craft and does not describe the Ugandan practice.
+
+Coverage for the inscriptions is read from Wikidata sitelinks, not from a
+search, so it is exact. Two details had to be handled to keep it honest.
+Wikidata often holds **two items per element**, one for the UNESCO inscription
+and one for the practice: Empaako's inscription item Q96213222 has no sitelinks
+at all while the practice item Q48748634 carries the English, French and Turkish
+articles, so reading only the first would report Empaako as undocumented when it
+is not. And `commonswiki` is not a Wikipedia, so counting it would say Barkcloth
+making is documented in two languages when it has one article.
+
+The grid itself is a floor, not a census. It only sees articles whose **title**
+carries a community's name, so Empaako and Kasubi Tombs are both real coverage
+and neither appears in a cell. A community name in a title also does not make an
+article heritage: 41 of 91 candidates were dropped as football clubs, schools,
+hotels and constituencies. Acholi Queens FC is not folklore.
+
+**The inventories that are named but not loaded.** The Ministry of Gender,
+Labour and Social Development's national ICH inventory, CCFU's case studies,
+UCOMA's community museums and the UBOS ethnicity tables are all real and all
+matter. None publishes machine-readable data, so none is ingested, and the page
+lists them as outstanding rather than counting them. Reconciling the Ministry's
+community inventories against this grid is the step that turns an empty cell
+into a named, citable thing to write.
+
 ## Running it
 
 ```bash

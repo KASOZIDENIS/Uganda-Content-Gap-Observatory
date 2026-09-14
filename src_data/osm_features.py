@@ -444,7 +444,12 @@ def export(conn, force=False):
                                  'wikidata_qid', 'wikipedia_tag',
                                  'link_state', 'osm_url'])
                 for r in rows:
-                    url = f'https://www.openstreetmap.org/{r[2]}/{r[3]}'
+                    # 'route' is this pipeline's own label for a named
+                    # linear feature assembled from many ways; osm_id is
+                    # one of those ways, and openstreetmap.org serves only
+                    # node, way and relation, so /route/ would 404.
+                    kind = 'way' if r[2] == 'route' else r[2]
+                    url = f'https://www.openstreetmap.org/{kind}/{r[3]}'
                     writer.writerow([r[0], labels.get(r[0], r[0]), r[1], r[2],
                                      r[3], r[4], r[5], r[6], r[7], url])
             print(f'    -> {os.path.basename(path)} ({len(rows)} rows)')

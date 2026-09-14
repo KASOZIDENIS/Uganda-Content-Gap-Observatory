@@ -32,6 +32,8 @@ import page_edition               # noqa: E402
 import page_topics                # noqa: E402
 import page_osm                   # noqa: E402
 import page_registers             # noqa: E402
+import page_commons               # noqa: E402
+import page_folklore              # noqa: E402
 import page_offices               # noqa: E402
 import page_undocumented          # noqa: E402
 
@@ -42,6 +44,8 @@ RENDERERS = {
     'topics': page_topics.render,
     'osm': page_osm.render,
     'registers': page_registers.render,
+    'commons': page_commons.render,
+    'folklore': page_folklore.render,
     'offices': page_offices.render,
     'undocumented': page_undocumented.render,
     'undocumented_men': page_undocumented.render,

@@ -1,0 +1,28 @@
+/* commons.css: what is specific to uganda_commons.html.
+   Expects tokens.css, shell.css and components.css to be loaded first. */
+body { line-height: 1.6; }
+.wrap { max-width: 1040px; }
+
+/* Media type and theme labels run long ("Photographs and bitmap images"),
+   so the bar labels get more room here than the shell's default. */
+.bar-row { grid-template-columns: 250px 1fr 84px; }
+
+.plain { max-width: 100%; }
+.plain th { white-space: nowrap; }
+.plain th.num, .plain td.num { padding-left: 22px; }
+.plain td:first-child, .plain th:first-child { min-width: 210px; }
+.spacer { height: 26px; }
+
+/* The category table is the only wide one on the page and its first column
+   holds a link, so it keeps its own floor rather than the shared one. */
+.plain td a { overflow-wrap: anywhere; }
+
+/* kept here rather than in components.css: a mobile override there would be
+   beaten by this sheet's own .bar-row and .wrap rules above */
+@media (max-width: 640px) {
+  h1 { font-size: 26px; } .wrap { padding: 36px 16px 72px; }
+  .tile .v { font-size: 25px; }
+  .bar-row { grid-template-columns: 128px 1fr 62px; gap: 8px; }
+  .bar-label { font-size: 12px; }
+  .plain td:first-child, .plain th:first-child { min-width: 140px; }
+}
